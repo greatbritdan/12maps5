@@ -1,0 +1,8 @@
+name={12maps epilogue}
+author=britdan
+description=12 maps of xmas 5  B epilodue B
+lives=0
+physics=5
+camera=2
+realtime=t
+nolowtime=t
