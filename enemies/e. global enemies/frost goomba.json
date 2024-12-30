@@ -48,7 +48,7 @@
 			[0,["set","varient"],1],
 			[0,["random","varchance"],[0,0,0,1,1]],
 			[0,["if","varchance","==",0],["add","currentcustomtimerstage"],7],
-				[0,["random","varchance"],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]],
+				[0,["random","varchance"],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]],
 				[0,["floor","varchance"]],
 				[0,["if","varchance","==",0],["add","currentcustomtimerstage"],2],
 					[0,["set","varient"],11],

@@ -15,6 +15,7 @@ base=icey
 	"dotransformaftercollision": true,
 	"playerneardist": false,
 
+	"gravity": 30,
 	"customtimer": [
 		[0,"setframe",["property","quadno"]]
 	],
