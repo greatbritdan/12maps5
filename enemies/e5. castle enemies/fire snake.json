@@ -33,9 +33,6 @@
 	"animationstart": 1,
 	"animationspeed": 0.1,
 
-	"edible":true,
-	"copyability":"fire",
-
 	"width": 0.75,
 	"height": 0.75,
 
