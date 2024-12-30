@@ -1,0 +1,75 @@
+{
+	"quadcount": 4,
+	"nospritesets": true,
+	"spawnonload": true,
+	
+	"width": 1,
+	"height": 1,
+	
+	"offsetX": 8,
+	"offsetY": 0,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+
+	"animationtype": "frames",
+	"animationstart": 1,
+	"animationframes": 4,
+	"animationspeed": 0.05,
+
+	"static": true,
+	"active": true,
+	"autodelete": false,
+
+	"category": 2,
+	"mask": [true,
+		true, false, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true],
+
+	"resistseverything": true,
+
+	"graphiccolor":[0,0,0,0],
+	"spawnsenemy": "barrier opacity",
+	"spawnenemydelays": [99e99],
+	"spawnpassedparameters": ["playerobj"],
+	"spawnsetparameters":[[1,255],[2,255],[3,255],[4,0]],
+
+	"movement": "shadow",
+    "shadowlag": 0,
+    "shadowinterpolate": false,
+    "shadowtarget": "player",
+	"shadowtargetplayer": 1,
+
+	"customtimer":[
+		[0,["set","savedquadgroup"],["property","quadgroup"]],
+		[0,["set","passivecollide"],["property","addoutput"]],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","quadgroup"],["property","outtable"]],
+		[0,"setframe",1],
+		[0,["set","quadgroup"],["property","quad"]],
+		[0,["if",["property","quadgroup"],"exists",""],["add","currentcustomtimerstage"],3],
+			[0,["set","quadgroup"],["property","savedquadgroup"]],
+			[0,"setframe",1],
+			[0,["set","currentcustomtimerstage"],2],
+
+		[0,"setframe",2],
+		[0,["set","playerobj"],["property","quad"]],
+
+		[0,["set","movement"],false],
+        [0,["set","x"],["property","startx"]],
+        [0,["set","y"],["property","starty"]],
+
+		[0,"spawnenemy"],
+		[0,["set","quadgroup"],["property","spawnedenemies"]],
+		[0,"setframe",1],
+		[0,["set","graphiccolor"],["property","quad"]],
+
+		[0,["set","quadgroup"],["property","savedquadgroup"]],
+		[0,"setframe",1]
+	],
+	"dontloopcustomtimer": true
+}

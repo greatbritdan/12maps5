@@ -1,0 +1,42 @@
+{
+	"hidden":true,
+
+	"active":false,
+
+	"width":0.0625,
+	"height":0.0625,
+	"spawnoffsety": -0.5,
+
+	"customtimer":[
+		[0,["set",1],255],
+		[0,["set",2],255],
+		[0,["set",3],255],
+
+		[0,["set","quadgroup"],["property","playerobj"]],
+		[0,"setframe","x"],
+		[0,["set","px"],["property","quad"]],
+		[0,"setframe","y"],
+		[0,["set","py"],["property","quad"]],
+		
+		[0,["set","dx"],["property","x"]],
+		[0,["subtract","dx"],["property","px"]],
+		[0,["multiply","dx"],["property","dx"]],
+
+		[0,["set","dy"],["property","y"]],
+		[0,["subtract","dy"],["property","py"]],
+		[0,["multiply","dy"],["property","dy"]],
+
+		[0,["set","dist"],["property","dx"]],
+		[0,["add","dist"],["property","dy"]],
+		[0,["sqrt","dist"]],
+		[0,["multiply","dist"],50],
+		
+		[0,["set",4],300],
+		[0,["subtract",4],["property","dist"]],
+		[0,["min",4],255],
+		[0,["max",4],0],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],3]
+	]
+}

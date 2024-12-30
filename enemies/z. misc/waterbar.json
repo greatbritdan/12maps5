@@ -1,0 +1,92 @@
+{
+	"quadcount": 9,
+	"nospritesets": true,
+	"spawnonload": true,
+	"quadno": 8,
+	
+	"width": 0.75,
+	"height": 0.75,
+	
+	"offsetX": 6,
+	"offsetY": 2,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+
+	"static": true,
+	"active": true,
+	"autodelete": false,
+
+	"category": 2,
+	"mask": [true,
+		true, false, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true],
+
+	"resistseverything": true,
+
+	"movement": "shadow",
+    "shadowlag": 0,
+    "shadowinterpolate": false,
+    "shadowtarget": "player",
+	"shadowtargetplayer": 1,
+
+	"airtimer": 8,
+	"customtimer":[
+		[0,["set","savedquadgroup"],["property","quadgroup"]],
+		[0,["set","passivecollide"],["property","addoutput"]],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","quadgroup"],["property","outtable"]],
+		[0,"setframe",1],
+		[0,["set","quadgroup"],["property","quad"]],
+		[0,"setframe",2],
+		[0,["set","playerobj"],["property","quad"]],
+
+		[0,["set","movement"],false],
+		[0,["set","active"],false],
+        [0,["set","x"],["property","startx"]],
+        [0,["set","y"],["property","starty"]],
+
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+			[0,["set","quadgroup"],["property","playerobj"]],
+			[0,"setframe","water"],
+			[0,["set","isunderwater"],["property","quad"]],
+
+			[0,"setframe","x"],
+			[0,["set","x"],["property","quad"]],
+			[0,"setframe","y"],
+			[0,["set","y"],["property","quad"]],
+			[0,["add","y"],-1.25],
+			[0,"setframe","size"],
+			[0,["if",["property","quad"],">",1],["add","y"],-0.25],
+
+			[0,["if",["property","isunderwater"],"==",false],["add","currentcustomtimerstage"],3],
+				[0,["subtract","airtimer"],["property","customtimertimer"]],
+				[0,["if","airtimer",">",0],["add","currentcustomtimerstage"],1],
+					[0,["add","currentcustomtimerstage"],12],
+		
+			[0,["if",["property","isunderwater"],"==",true],["add","currentcustomtimerstage"],5],
+				[0,["set","dt"],["property","customtimertimer"]],
+				[0,["multiply","dt"],2.5],
+				[0,["add","airtimer"],["property","dt"]],
+				[0,["if","airtimer","<",8],["add","currentcustomtimerstage"],1],
+					[0,["set","airtimer"],8],
+
+			[0,["set","quadgroup"],["property","savedquadgroup"]],
+			[0,["set","newframe"],["property","airtimer"]],
+			[0,["ceil","newframe"]],
+			[0,"setframe",["property","newframe"]],
+
+			[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],["property","loopline"]],
+
+		[0,["set","playsound"],["property","triggeranimation"]],
+		[0,"playsound","killplayer"],
+		[0,["set","quadgroup"],["property","savedquadgroup"]],
+		[0,"setframe",9]
+	],
+	"dontloopcustomtimer": true
+}
