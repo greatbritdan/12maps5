@@ -1,0 +1,13 @@
+base=fire flower projectile u0
+{
+	"animationstart": 13,
+	"transformsinto": "fire flower boomb",
+
+	"bounceforce": 16,
+	"lifetime": 3,
+	
+	"width": 0.5,
+	"height": 0.5,
+	"offsetX": 4,
+	"offsetY": 4
+}

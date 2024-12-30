@@ -1,0 +1,15 @@
+base=projectile
+{
+	"quadcount": 16,
+
+	"animationtype": "frames",
+	"animationstart": 1,
+	"animationframes": 4,
+	"animationspeed": 0.0625,
+
+	"spawnsound": "blockhit",
+
+	"transforms": false,
+	"active": false,
+	"lifetime": 0.25,
+}

@@ -1,0 +1,34 @@
+base=projectile
+{
+	"quadcount": 4,
+	"quadno": 1,
+
+	"width": 0.5,
+	"height": 0.5,
+	"offsetX": 4,
+	"offsetY": 4,
+
+	"animationtype": "none",
+	"bounces": false,
+	"spawnsound": "iciclefall",
+
+	"killsenemies": true,
+	"lifetime": 1.5,
+
+	"spawnsenemy": "ice flower projectile side",
+	"spawnenemydelays": [99e99],
+	"spawnenemyspeedy": -12.5,
+	"spawnenemyspeedx": 12.5,
+	"spawnenemyoffsety": 0.75,
+
+	"customtimer": [[0,["set","speedy"],-25]],
+	"dontloopcustomtimer": true,
+
+	"hitsblocks": true,
+	"breakblockside": "global",
+	"dotransformaftercollision": true,
+
+	"transforms": true,
+	"transformsinto": "ice flower projectile break u0",
+	"transformtrigger": ["enemykill","globalcollide"],
+}

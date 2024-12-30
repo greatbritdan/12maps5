@@ -1,0 +1,16 @@
+base=snow flower projectile u0
+{
+	"quadno": 4,
+	"transformsinto": "snow flower projectile break u3",
+
+	"lifetime": 2.5,
+	"customtimer": [
+		[0,["set","speedy"],-6.5],
+		[0,["set","spawnenemyspeedx"],["property","speedx"]],
+		[0,["reverse","spawnenemyspeedx"]],
+		[0,"spawnenemy"]
+	],
+	"spawnsetparameters": [["customtimer",false]],
+
+	"hitsblocks": true
+}

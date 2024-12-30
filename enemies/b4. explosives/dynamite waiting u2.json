@@ -1,0 +1,7 @@
+base=dynamite waiting u0
+{
+	"quadno": 3,
+	"transformsinto": "dynamite explode u2",
+
+	"customtimer": [[0,["set","speedy"],-5]],
+}

@@ -1,0 +1,24 @@
+base=dynamite
+{
+	"hidden": true,
+	"active": false,
+
+	"customscissor": [0,0,1,1],
+	"spawnoffsety": 0.75,
+
+	"lifetime": 0.5,
+	"risetime": 0.5,
+	"customtimer": [
+		[0,["set","temp"],0.75],
+		[0,["divide","temp"],["property","risetime"]],
+		[0,["multiply","temp"],["property","customtimertimer"]],
+		[0,["subtract","y"],["property","temp"]],
+		[0,["set","customtimertimer"],0]
+	],
+	"dontloopcustomtimer": false,
+
+	"transforms": true,
+	"transformsinto": "dynamite",
+	"transformtrigger": "lifetime",
+	"transformsetparameters": [["speedy",-2]]
+}z

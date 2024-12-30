@@ -1,0 +1,16 @@
+base=projectile
+{
+	"quadcount": 16,
+
+	"animationtype": "frames",
+	"animationstart": 1,
+	"animationframes": 4,
+	"animationspeed": 0.125,
+
+	"killsenemies": true,
+	"lifetime": 2,
+
+	"transforms": true,
+	"transformsinto": "fire flower projectile hit u0",
+	"transformtrigger": ["enemykill","leftcollide","rightcollide"]
+}

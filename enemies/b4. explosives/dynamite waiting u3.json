@@ -1,0 +1,10 @@
+base=dynamite waiting u0
+{
+	"quadno": 4,
+	"transformsinto": "dynamite explode u3",
+	"transformtrigger": ["lifetime","animation"],
+	"transformanimation": "reload",
+
+	"lifetime": 5,
+	"customtimer": [[0,["set","speedy"],-6]],
+}

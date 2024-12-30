@@ -1,0 +1,12 @@
+base=ice flower projectile u0
+{
+	"quadno": 3,
+	"transformsinto": "ice flower projectile break u2",
+
+	"customtimer": [[0,["set","speedy"],-30]],
+
+	"width": 0.75,
+	"height": 0.75,
+	"offsetX": 6,
+	"offsetY": 2,
+}

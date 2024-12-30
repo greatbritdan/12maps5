@@ -1,0 +1,33 @@
+base=projectile
+{
+	"quadcount": 4,
+	"quadno": 1,
+
+	"width": 0.5,
+	"height": 0.5,
+	"offsetX": 4,
+	"offsetY": 4,
+
+	"rollanimation": true,
+	"animationtype": "none",
+	"bounces": false,
+	"spawnsound": "grab",
+
+	"killsenemies": true,
+	"lifetime": 2,
+
+	"spawnsenemy": "snow flower projectile u3",
+	"spawnenemydelays": [99e99],
+	"spawnenemyspeedy": -6.5,
+	"spawnenemyspeedx": -14,
+
+	"customtimer": [[0,["set","speedy"],-4]],
+	"dontloopcustomtimer": true,
+
+	"breakblockside": "sides",
+	"dotransformaftercollision": true,
+
+	"transforms": true,
+	"transformsinto": "snow flower projectile break u0",
+	"transformtrigger": ["leftcollide","rightcollide"],
+}z

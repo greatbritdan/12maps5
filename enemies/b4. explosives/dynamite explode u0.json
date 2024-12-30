@@ -1,0 +1,44 @@
+{
+	"hidden": true,
+
+	"quadcount": 16,
+	"nospritesets": true,
+
+	"width": 1,
+	"height": 1,
+
+	"quadcenterX": 22,
+	"quadcenterY": 22,
+	"offsetX": 8,
+	"offsetY": 0,
+	"spawnoffsety": 0.25,
+	
+	"animationtype": "frames",
+	"animationframes": 4,
+	"animationstart": 1,
+	"animationspeed": 0.05,
+
+	"activestatic": true,
+	"static": true,
+	"resistseverything": true,
+	"lifetime": 0.2,
+
+	"category": 4,
+	"mask": [true, 
+		false, false, false, true, true,
+		false, true, false, true, false,
+		false, false, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"spawnsound": "boom",
+
+	"killsenemies": true,
+	"breaksblocks": true,
+	"customtimer": [
+		[0.05,["set","breaksblocks"]]
+	],
+	"dontloopcustomtimer": true
+}

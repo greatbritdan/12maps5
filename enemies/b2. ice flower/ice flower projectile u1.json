@@ -1,0 +1,7 @@
+base=ice flower projectile u0
+{
+	"quadno": 2,
+	"transformsinto": "ice flower projectile break u1",
+
+	"customtimer": [[0,["set","speedy"],-27.5]],
+}

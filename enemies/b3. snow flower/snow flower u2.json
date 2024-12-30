@@ -1,0 +1,7 @@
+base=snow flower
+{
+	"hidden": true,
+	"animationtriggeronspawn": false,
+	
+	"upgrade": 2
+}

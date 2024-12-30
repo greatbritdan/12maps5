@@ -1,0 +1,45 @@
+base=item
+{
+	"animationtriggeronspawn": "shopfiresp",
+	"transformsinto": ["fire flower u1","fire flower u2","fire flower u3"],
+	"transformanimation": ["shopfiresp1","shopfiresp2","shopfiresp3"],
+
+	"edible":true,
+	"copyability":"fire",
+
+	"upgradelist": [
+		{
+			"size": 3,
+			"enemy": ["fire flower projectile u0"],
+			"button": ["run"],
+			"offsety": -0.5,
+			"max": 2,
+			"speed": 12.5,
+		},
+		{
+			"size": 3,
+			"enemy": ["fire flower projectile u1"],
+			"button": ["run"],
+			"offsety": -0.5,
+			"max": 2,
+			"speed": 15,
+		},
+		{
+			"size": 3,
+			"enemy": ["fire flower projectile u2"],
+			"button": ["run"],
+			"offsety": -0.5,
+			"max": 3,
+			"speed": 17.5,
+		},
+		{
+			"size": 3,
+			"enemy": ["fire flower projectile u3"],
+			"button": ["run"],
+			"offsety": -0.5,
+			"max": 3,
+			"speed": 20,
+		}
+	],
+	"upgradecolor": [[252,216,168],[216,40,0],[252,152,56]]
+}

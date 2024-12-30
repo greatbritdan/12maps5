@@ -1,0 +1,9 @@
+base=snow flower projectile break u0
+{
+    "animationstart": 9,
+
+	"width": 0.75,
+	"height": 0.75,
+	"offsetX": 6,
+	"offsetY": 2
+}

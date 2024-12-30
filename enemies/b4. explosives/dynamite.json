@@ -1,0 +1,45 @@
+base=item
+{
+	"animationtriggeronspawn": "shopdynfosp",
+	"transformsinto": ["dynamite u1","dynamite u2","dynamite u3"],
+	"transformanimation": ["shopdynfosp1","shopdynfosp2","shopdynfosp3"],
+
+	"edible":true,
+	"copyability":"bomb",
+
+	"upgradelist": [
+		{
+			"size": 3,
+			"enemy": ["dynamite waiting u0"],
+			"button": ["run"],
+			"offsety": -0.5,
+			"max": 1,
+			"speed": 3,
+		},
+		{
+			"size": 3,
+			"enemy": ["dynamite waiting u1"],
+			"button": ["run"],
+			"offsety": -0.5,
+			"max": 1,
+			"speed": 4,
+		},
+		{
+			"size": 3,
+			"enemy": ["dynamite waiting u2"],
+			"button": ["run"],
+			"offsety": -0.5,
+			"max": 1,
+			"speed": 5,
+		},
+		{
+			"size": 3,
+			"enemy": ["dynamite waiting u3"],
+			"button": ["run"],
+			"offsety": -0.5,
+			"max": 1,
+			"speed": 6,
+		}
+	],
+	"upgradecolor": [[225,255,255],[60,188,252],[252,152,56]]
+}

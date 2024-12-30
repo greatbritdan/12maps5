@@ -1,0 +1,40 @@
+{
+	"hidden": true,
+	
+	"quadcount": 4,
+	"quadno": 1,
+	"nospritesets": true,
+
+	"offsetX": 4,
+	"offsetY": 8,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+
+	"width": 0.5,
+	"height": 0.5,
+
+	"category": 13,
+	"mask": [true,
+		false, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true],
+
+	"resistseverything": true,
+	"ignoreplatform": true,
+	"autodelete": true,
+
+	"lifetime": 2,
+	"friction": 12,
+	"airfriction": 0,
+
+	"customtimer": [[0,["set","speedy"],-3]],
+	"dontloopcustomtimer": true,
+
+	"transforms": true,
+	"transformsinto": "dynamite explode u0",
+	"transformtrigger": ["lifetime"]	
+}

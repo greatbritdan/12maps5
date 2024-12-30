@@ -1,0 +1,7 @@
+base=ice flower
+{
+	"hidden": true,
+	"animationtriggeronspawn": false,
+	
+	"upgrade": 1
+}

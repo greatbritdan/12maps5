@@ -1,0 +1,49 @@
+base=item
+{
+	"animationtriggeronspawn": "shopsnowsp",
+	"transformsinto": ["snow flower u1","snow flower u2","snow flower u3"],
+	"transformanimation": ["shopsnowsp1","shopsnowsp2","shopsnowsp3"],
+
+	"edible":true,
+	"copyability":"snowball",
+
+	"upgradelist": [
+		{
+			"size": 3,
+			"enemy": ["snow flower projectile u0"],
+			"button": ["run"],
+			"offsety": -0.5,
+			"max": 1,
+			"speed": 8,
+			"nofiresound": true,
+		},
+		{
+			"size": 3,
+			"enemy": ["snow flower projectile u1"],
+			"button": ["run"],
+			"offsety": -0.5,
+			"max": 1,
+			"speed": 10,
+			"nofiresound": true,
+		},
+		{
+			"size": 3,
+			"enemy": ["snow flower projectile u2"],
+			"button": ["run"],
+			"offsety": -0.5,
+			"max": 1,
+			"speed": 12,
+			"nofiresound": true,
+		},
+		{
+			"size": 3,
+			"enemy": ["snow flower projectile u3"],
+			"button": ["run"],
+			"offsety": -0.5,
+			"max": 1,
+			"speed": 14,
+			"nofiresound": true,
+		}
+	],
+	"upgradecolor": [[225,255,255],[60,188,252],[252,152,56]]
+}

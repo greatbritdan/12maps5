@@ -1,0 +1,49 @@
+base=item
+{
+	"animationtriggeronspawn": "shopicesp",
+	"transformsinto": ["ice flower u1","ice flower u2","ice flower u3"],
+	"transformanimation": ["shopicesp1","shopicesp2","shopicesp3"],
+
+	"edible":true,
+	"copyability":"ice",
+
+	"upgradelist": [
+		{
+			"size": 3,
+			"enemy": ["ice flower projectile u0"],
+			"button": ["run"],
+			"offsety": -1.25,
+			"max": 1,
+			"speed": 3,
+			"nofiresound": true,
+		},
+		{
+			"size": 3,
+			"enemy": ["ice flower projectile u1"],
+			"button": ["run"],
+			"offsety": -1.25,
+			"max": 1,
+			"speed": 4,
+			"nofiresound": true,
+		},
+		{
+			"size": 3,
+			"enemy": ["ice flower projectile u2"],
+			"button": ["run"],
+			"offsety": -1.25,
+			"max": 1,
+			"speed": 5,
+			"nofiresound": true,
+		},
+		{
+			"size": 3,
+			"enemy": ["ice flower projectile u3"],
+			"button": ["run"],
+			"offsety": -1.25,
+			"max": 2,
+			"speed": 6,
+			"nofiresound": true,
+		}
+	],
+	"upgradecolor": [[225,255,255],[60,188,252],[252,152,56]]
+}

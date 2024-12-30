@@ -1,0 +1,19 @@
+base=ice flower projectile u0
+{
+	"quadno": 4,
+	"transformsinto": "ice flower projectile break u3",
+
+	"customtimer": [
+		[0,["set","speedy"],-32],
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyspeedx"],-12.5],
+		[0,"spawnenemy"]
+	],
+
+	"width": 1,
+	"height": 1,
+	"offsetX": 8,
+	"offsetY": 0,
+
+	"breaksblocks": true
+}

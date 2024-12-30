@@ -1,0 +1,8 @@
+base=snow flower projectile u0
+{
+	"quadno": 3,
+	"transformsinto": "snow flower projectile break u2",
+
+	"lifetime": 2.5,
+	"customtimer": [[0,["set","speedy"],-6]],
+}

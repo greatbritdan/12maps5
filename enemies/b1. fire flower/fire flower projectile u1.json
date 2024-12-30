@@ -1,0 +1,8 @@
+base=fire flower projectile u0
+{
+	"animationstart": 5,
+	"transformsinto": "fire flower projectile hit u1",
+
+	"bounceforce": 14,
+	"lifetime": 2.5
+}

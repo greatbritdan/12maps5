@@ -1,0 +1,9 @@
+base=fire flower projectile hit u0
+{
+    "animationstart": 9,
+
+	"width": 0.5,
+	"height": 0.5,
+	"offsetX": 4,
+	"offsetY": 4
+}
