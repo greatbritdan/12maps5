@@ -26,9 +26,6 @@
 	"static":false,
 	"active":true,
 
-	"edible":true,
-	"copyability":"fire",
-
 	"category":4,
 	"mask": [	true, 
 			false, false, true, false, true,
@@ -54,6 +51,7 @@
 		[0,"setframe","customscissor"],
 		[0,["set","customscissor"],["property","quad"]],
 		[0,"setframe","transformkill"],
+		[0,["if","quad","~=",true],"setframe","delete"],
 		[0,["set","instantdelete"],["property","quad"]],
 		[0,["set","quadgroup"],["property","quadstore"]],
 		[0,"setframe",1],
