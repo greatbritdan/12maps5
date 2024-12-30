@@ -1,0 +1,36 @@
+base=cannon
+{	
+	"hidden": true,
+	"customtimer": [
+		[0,["if",["property","etype"],"==","left"],["set","quadno"],1],
+		[0,["if",["property","etype"],"==","left"],["set","spawnenemyspeedx"],-12],
+		[0,["if",["property","etype"],"==","right"],["set","quadno"],2],
+		[0,["if",["property","etype"],"==","right"],["set","spawnenemyspeedx"],12],
+		[0,["if",["property","etype"],"==","fast-left"],["set","quadno"],3],
+		[0,["if",["property","etype"],"==","fast-left"],["set","spawnenemyspeedx"],-16],
+		[0,["if",["property","etype"],"==","fast-left"],["set","spawnenemydelays"],[2]],
+		[0,["if",["property","etype"],"==","fast-right"],["set","quadno"],4],
+		[0,["if",["property","etype"],"==","fast-right"],["set","spawnenemyspeedx"],16],
+		[0,["if",["property","etype"],"==","fast-right"],["set","spawnenemydelays"],[2]],
+
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+		[0,["set","quadgroupstore"],["property","quadgroup"]],
+		[0,["set","quadstore"],["property","quad"]],
+
+		[0,["set","quadgroup"],["property","spawner"]],
+		[0,"setframe","x"],
+		[0,["set","x"],["property","quad"]],
+		[0,["add","x"],0.125],
+		[0,"setframe","y"],
+		[0,["set","y"],["property","quad"]],
+		[0,["add","y"],-1.25],
+
+		[0,["set","quadgroup"],["property","quadgroupstore"]],
+		[0,["set","quad"],["property","quadstore"]],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],["property","loopline"]],
+	],
+	"dontloopcustomtimer": false,
+}

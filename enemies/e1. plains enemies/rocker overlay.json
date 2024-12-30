@@ -1,0 +1,35 @@
+{
+	"hidden": true,
+	
+	"nospritesets": true,
+	"drawback":true,
+	"portalable":false,
+
+	"offsetX": 16,
+	"offsetY": -8,
+	"quadcenterX": 16,
+	"quadcenterY": 16,
+	
+	"width": 0,
+	"height": 0,
+	
+	"active": false,
+
+	"customtimer": [
+		[0,["set","quadstore"],["property","quad"]],
+		[0,["set","quadgroup"],["property","spawner"]],
+
+		[0,"setframe","x"],
+		[0,["set","x"],["property","quad"]],
+		[0,"setframe","y"],
+		[0,["set","y"],["property","quad"]],
+
+		[0,"setframe","transformkill"],
+		[0,["if","quad","~=",true],"setframe","delete"],
+		[0,["set","instantdelete"],["property","quad"]],
+		[0,["if","quad","==",true],["set","drawable"],false],
+
+		[0,["set","quad"],["property","quadstore"]],
+		[0,["set","customtimertimer"],0]
+	],
+}

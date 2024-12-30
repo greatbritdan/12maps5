@@ -1,0 +1,145 @@
+{
+	"editortab": "all enemies",
+
+	"quadcount":2,
+	"nospritesets": true,
+	"spawnonload": true,
+	"drawback":true,
+
+	"spawnoffsetx":0.5,
+
+	"offsetX": 16,
+	"offsetY": -8,
+	"quadcenterX": 16,
+	"quadcenterY": 24,
+	
+	"width": 2,
+	"height": 2,
+
+	"ignoregravity":true,
+	"gravity": 0,
+
+	"static":true,
+	"category": 2,
+	"mask": [true],
+	"snapxtogrid":true,
+	"doesntunrotate": true,
+	"resistseverything": true,
+	"resistsstar":true,
+	"ignoreplatform": true,
+	"portalable":false,
+
+	"platform": true,
+	"platformchecktable": ["player"],
+	"platformpush": true,
+	"solidkill":true,
+	"noplatformcarrying":true,
+
+	"spawnsenemy": "rocker overlay",
+	"spawnenemydelays": [99e99],
+
+	"movetimer": 0,
+	"statictime": 1,
+	"movetime": 0.1,
+	"movemax": 2,
+	"movecount": 0,
+	"movedir": 1,
+	"walktimer":0.5,
+
+	"supersizeproperties":{"stoodon":true},
+
+	"storerotation": 0,
+	"customtimer": [
+		[0,["set","ceilcollide"],["property","dosupersize"]],
+		[0,["if","ismirrored","==",true],["reverse","movedir"]],
+		[0,["set","speedx"],1e-100],
+		[0,["multiply","speedx"],["property","movedir"]],
+
+		[0,["set","temp"],["property","movecount"]],
+		[0,["mod","temp"],2],
+		[0,["if","temp","==",0],["set","killsontop"],true],
+		[0,["set","killsonbottom"],["property","killsontop"]],
+		[0,["if","temp","==",1],["set","killsonsides"],true],
+		[0,"spawnenemy"],
+		[0,"setframe",2],
+
+		[0,["set","rotation"],["property","storerotation"]],
+		[0,["divide","rotation"],1.5707963268],
+		[0,["round","rotation"]],
+		[0,["multiply","rotation"],1.5707963268],
+		[0,["set","storerotation"],["property","rotation"]],
+
+		[0,["add","movecount"],1],
+		[0,["if","movecount","<=","movemax"],["add","currentcustomtimerstage"],2],
+			[0,["set","movecount"],1],
+			[0,["reverse","movedir"]],
+
+
+
+		[0.1,["set","killsonpassive"],true],
+		[0,["subtract","customtimertimer"],["property","statictime"]],
+
+
+
+		[0,["set","customtimertimer"],0],
+
+		[0,["if","stoodon","~=",true],["add","currentcustomtimerstage"],4],
+			[0,["set","walktimer"],0.5],
+			[0,["set","stoodon"]],
+			[0,["set","customtimertimer"],0],
+			[0,["subtract","currentcustomtimerstage"],5],
+
+		[0,["subtract","walktimer"],["property","customtimertimer"]],
+		[0,["if","walktimer",">",0],["subtract","currentcustomtimerstage"],8],
+
+
+
+		[0,["set","killsonsides"]],
+		[0,["set","killsontop"]],
+		[0,["set","killsonbottom"]],
+		[0,["set","killsonpassive"]],
+		[0,["set","noplatformcarrying"]],
+
+		[0,["set","lifetimer"],["property","movetime"]],
+		[0,["subtract","lifetimer"],["property","customtimertimer"]],
+
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+		[0,["set","speedx"],["property","movedir"]],
+		[0,["divide","speedx"],["property","movetime"]],
+		[0,["set","temp"],["property","speedx"]],
+		[0,["multiply","temp"],["property","customtimertimer"]],
+		[0,["add","x"],["property","temp"]],
+		[0,["set","temp"],["property","customtimertimer"]],
+		[0,["multiply","temp"],["property","movedir"]],
+		[0,["multiply","temp"],1.5707963268],
+		[0,["divide","temp"],["property","movetime"]],
+		[0,["add","rotation"],["property","temp"]],
+		[0,["set","storerotation"],["property","rotation"]],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],["property","loopline"]]
+	],
+	"dontloopcustomtimer": true,
+
+	"transforms": true,
+	"transformsinto": "rocker",
+	"transformtrigger": "lifetime",
+	"transformpassedparameters": ["movecount","movedir","moveignore","movemax","storerotation","transformenemyanimationonspawn","transformanimation","movetime","statictime"],
+	"transformpassedparametersbeforespawn": true,
+	"transformsoffsetx":-0.5,
+
+	"casesensitive":true,
+	"rightclick": [
+		["text","length:"],
+		["dropdown","movemax",4,[2,4,6,8,10]],
+		["text","speed:"],
+		["dropdown",[
+			[["statictime",0.75]],
+			[["statictime",0]]
+		],8,["normal","fast"]],
+		["checkbox","ismirrored","mirror?"]
+	],
+	"rightclicktypes": ["num","string","bool"],
+	"rightclickdefaults": ["2","normal","false"]
+}

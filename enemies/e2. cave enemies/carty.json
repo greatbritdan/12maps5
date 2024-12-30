@@ -1,0 +1,100 @@
+{
+	"quadcount": 1,
+	"nospritesets": true,
+	"spawnonload": false,
+
+	"offsetX": 8,
+	"offsetY": 8,
+	"quadcenterX": 12,
+	"quadcenterY": 8,
+	
+	"width": 1,
+	"height": 0.5,
+
+	"gravity": 0,
+
+	"category": 4,
+	"mask": [true, 
+		false, false, false, false, true,
+		false, true, false, true, false,
+		false, true, true, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false, true],
+	
+	"platform": true,
+	"platformchecktable": ["player"],
+	"platformpush": true,
+
+	"resistseverything": true,
+	"ignoreplatform": true,
+	"portalable": false,
+	"dontmirror": true,
+
+	"spawnsenemy": "nil",
+	"spawnenemydelays": [99e99],
+
+	"statictime": 0,
+	"movedir": 1,
+
+	"customtimer": [
+		[0,["if","spawnsenemy","~=","nil"],"spawnenemy"],
+
+		[0,["set","trackstartx"],["property","x"]],
+		[0,["subtract","trackstartx"],["property","nxoff"]],
+		[0,["set","trackendx"],["property","x"]],
+		[0,["add","trackendx"],["property","pxoff"]],
+
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+		[0,["if","statictime","<=",0],["add","currentcustomtimerstage"],3],
+			[0,["subtract","statictime"],["property","customtimertimer"]],
+			[0,["set","customtimertimer"],0],
+			[0,["set","currentcustomtimerstage"],["property","loopline"]],
+
+		[0,["set","dt"],["property","customtimertimer"]],
+		[0,["multiply","dt"],2],
+		[0,["multiply","dt"],["property","movedir"]],
+		[0,["add","speedx"],["property","dt"]],
+		[0,["min","speedx"],6],
+		[0,["max","speedx"],-6],
+
+		[0,["set","newx"],["property","x"]],
+		[0,["set","changex"],["property","speedx"]],
+		[0,["multiply","changex"],["property","customtimertimer"]],
+		[0,["add","newx"],["property","changex"]],
+
+		[0,["if","movedir","~=",1],["add","currentcustomtimerstage"],6],
+			[0,["if","newx","<","trackendx"],["add","currentcustomtimerstage"],5],
+				[0,["set","speedx"],0],
+				[0,["set","x"],["property","trackendx"]],
+				[0,["reverse","movedir"]],
+				[0,["set","statictime"],1],
+
+		[0,["if","movedir","~=",-1],["add","currentcustomtimerstage"],5],
+			[0,["if","newx",">","trackstartx"],["add","currentcustomtimerstage"],4],
+				[0,["set","speedx"],0],
+				[0,["set","x"],["property","trackstartx"]],
+				[0,["reverse","movedir"]],
+				[0,["set","statictime"],1],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],["property","loopline"]]
+	],
+	"dontloopcustomtimer": true,
+
+	"cannondir": 0,
+	"rightclick": [
+		["text","type:"],
+		["dropdown","spawnsenemy",12,["","sawy carty","cannon carty","cannon carty right"],["empty","sawy","cannon l","cannon r"]],
+		["text","-x offset:"],
+		["input","nxoff",5],
+		["text","+x offset:"],
+		["input","pxoff",5],
+		["text","direction:"],
+		["dropdown","movedir",6,[-1,1],["left","right"]]
+	],
+	"rightclicktypes": ["string","num","num","num"],
+	"rightclickdefaults": ["empty carty","0","4","1"]
+}

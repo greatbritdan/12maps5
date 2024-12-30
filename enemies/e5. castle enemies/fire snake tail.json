@@ -1,0 +1,67 @@
+{
+	"quadcount":1,
+	"nospritesets":true,
+	"hidden":true,
+
+	"drawback":true,
+	"friction":20,
+
+	"animationtype":"mirror",
+	"animationspeed":0.1,
+
+	"kills":true,
+	"meltsice":true,
+	"fireenemy":{},
+
+	"movement":"shadow",
+	"shadowtarget":"parent",
+	"shadowrate":0.05,
+	"shadowlag":0.6,
+
+	"width":0.5,
+	"height":0.5,
+
+	"gravity":0,
+
+	"static":false,
+	"active":true,
+
+	"edible":true,
+	"copyability":"fire",
+
+	"category":4,
+	"mask": [	true, 
+			false, false, true, false, true,
+			false, true, false, true, true,
+			false, true, true, false, true,
+			true, true, false, true, true,
+			false, true, true, false, false,
+			true, false, true, true, true,
+			false, false],
+	"emancipatecheck":true,
+	"autodelete":true,
+	"resistseverything":true,
+
+	"customtimer":[
+		[0,["set","parent"],["property","spawner"]],
+
+		[0,["set","quadstore"],["property","quadgroup"]],
+		[0,["set","quadgroup"],["property","spawner"]],
+		[0,"setframe","shot"],
+		[0,["set","shot"],["property","quad"]],
+		[0,"setframe","active"],
+		[0,["set","active"],["property","quad"]],
+		[0,"setframe","customscissor"],
+		[0,["set","customscissor"],["property","quad"]],
+		[0,"setframe","transformkill"],
+		[0,["set","instantdelete"],["property","quad"]],
+		[0,["set","quadgroup"],["property","quadstore"]],
+		[0,"setframe",1],
+		[0,["set","customtimertimer"],0]
+	],
+
+	"offsetX": 4,
+	"offsetY": 5,
+	"quadcenterX": 4,
+	"quadcenterY": 8
+}

@@ -1,0 +1,113 @@
+{
+	"quadcount":2,
+	"nospritesets":true,
+
+	"friction":999,
+	"airfriction":0,
+
+	"rightclickmenu":["jumpupoffset",0,1,2,3,4,5,6,7,8,-1,-2,-3,-4,-5,-6,-7,-8,-999],
+	"rightclickmenudisplay":["up only offset","0","+1","+2","+3","+4","+5","+6","+7","+8","-1","-2","-3","-4","-5","-6","-7","-8","up only"],
+
+	"supersizeproperties":{
+		"falling":false,
+		"jumptimer":98.5,
+		"currentcustomtimerstage":12,
+		"customtimertimer":0,
+	},
+
+	"movement":"chase",
+	"chasespace":0,
+	"chasespeed":1.5,
+	"chaseacceleration":100,
+
+	"shotjumpforce":0,
+	"shotspeedx":0,
+	"facesplayer": true,
+
+	"kills":true,
+	"meltsice":true,
+	"fireenemy":{},
+
+	"animationtype": "frames",
+	"animationframes": 2,
+	"animationstart": 1,
+	"animationspeed": 0.1,
+
+	"edible":true,
+	"copyability":"fire",
+
+	"width": 0.75,
+	"height": 0.75,
+
+	"gravity": 10,
+
+	"static": false,
+	"active": true,
+
+	"category":4,
+	"mask": [	true, 
+			false, false, true, false, true,
+			false, true, false, true, true,
+			false, false, true, false, true,
+			true, true, false, true, true,
+			false, true, true, false, false,
+			true, false, true, true, true,
+			false, false],
+	"emancipatecheck": true,
+	"autodelete": true,
+	"resistsfire":true,
+
+	"-jumps": true,
+	"jumptime": 100,
+	"jumptimer":98.5,
+	"jumpforce": 5,
+	"jumpforcedown": 5,
+	"noplayercollisiononthrow":true,
+
+	"transforms":true,
+	"transformtrigger":"freeze",
+	"transformsinto":"poof",
+	"dontpasstracked":true,
+
+	"spawnsenemy":"fire snake tail",
+	"spawnenemydelays":[999],
+	"spawnenemyoffsety":-0.125,
+
+	"customtimer":[
+		[0,["add","starty"],["property","jumpupoffset"]],
+		[0,["set","jumps"],true],
+		[0,["set","collidestore"],["property","floorcollide"]],
+		[0,["set","floorcollide"],["property","dosupersize"]],
+		[0,"spawnenemy"],
+		[0,["set","spawnsetparameters"],[["shadowlag",0.45]]],
+		[0,"spawnenemy"],
+		[0,["set","spawnsetparameters"],[["shadowlag",0.3]]],
+		[0,"spawnenemy"],
+		[0,["set","spawnsetparameters"],[["shadowlag",0.15]]],
+		[0,"spawnenemy"],
+		[0,["set","floorcollide"],["property","collidestore"]],
+
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+		[0,["if","y",">=","starty"],["set","jumponlyupdistfrombottom"],999],
+		[0,["if","y","<","starty"],["set","jumponlyupdistfrombottom"],0],
+		[0,["-print","jumponlyupdistfrombottom"]],
+
+		[0.1,"wait"],
+
+		[0.65,["random","jumpforce"],[5, 8.5]],
+		[0.65,["set","chaseacceleration"],100],
+		[0,["random","jumpforcedown"],[5, 8.5]],
+		[0.2,["set","chaseacceleration"],0],
+		[0,["set","floorcollide"],["property","dosupersize"]],
+
+		[999,"wait"]
+	],
+
+	"offsetX": 6,
+	"offsetY": 2,
+	"quadcenterX": 8,
+	"quadcenterY": 9,
+
+	"light":2,
+}

@@ -1,0 +1,61 @@
+{
+	"quadcount": 4,
+	"nospritesets": true,
+	"dontmirror": true,
+	
+	"width": 0.75,
+	"height": 0.75,
+
+	"offsetX": 6,
+	"offsetY": 2,
+	"quadcenterX": 12,
+	"quadcenterY": 12,
+	"spawnoffsety": -0.125,
+	
+	"static": false,
+	"active": true,
+	"autodelete": true,
+	"gravity": 0,
+	
+	"category": 9,
+	"mask": [true,
+		false, false, false, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true],
+
+	"animationtype": "frames",
+	"animationstart": 1,
+	"animationframes": 4,
+	"animationspeed": 0.12,
+
+	"kills": true,
+	
+	"edible":true,
+	"copyability":"fire",
+
+	"reflects": true, "rot": 0,
+	"customtimer": [
+		[0,["atan2","rot"],[["property","speedx"],["property","speedy"]]],
+		[0,["reverse","rot"]],
+		[0,["add","rot"],1.5707],
+		[0,["set","rotation"],["property","rot"]],
+		[0,["set","customtimertimer"],0]
+	],
+
+	"rightclickmenu": ["uwu",
+		[["speedx", 0],["speedy", 2]],
+		[["speedx", 0],["speedy", -2]],
+		[["speedx", 2],["speedy", 0]],
+		[["speedx", -2],["speedy", 0]],
+		[["speedx", 2],["speedy", 2]],
+		[["speedx", 2],["speedy", -2]],
+		[["speedx", -2],["speedy", 2]],
+		[["speedx", -2],["speedy", -2]]
+	],
+	"rightclickmenutable": true,
+	"rightclickmenumultipleproperties": true,
+	"rightclickmenudisplay": ["direction","down","up","right","left","right-down","right-up","left-down","left-up"]
+}

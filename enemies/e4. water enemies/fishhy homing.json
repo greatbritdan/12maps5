@@ -1,0 +1,22 @@
+base=fishhy
+{	
+	"playerneardist": [-3, -3.25, 7, 7],
+	"transformsinto": ["fishhy homing follow","boomb"],
+	"transformtrigger": ["playernear","shot"],
+	"transformpassedparameters": ["direction","e_shotframe","varient"],
+
+	"wcddeathproperties":{
+		"deathscript":false,
+		"deatheffect":"boomb",
+		"deatheffectoffsety":0.375,
+		"instantdelete":true,
+		"active":false,
+		"drawable":false,
+		"nodeaththrow":true,
+		"dead":true,
+	},
+	"wcdvulnerable":true,
+
+	"edible":true,
+	"copyability":"crash",
+}

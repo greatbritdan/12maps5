@@ -1,0 +1,13 @@
+base=snowpedo
+{
+	"hidden": true,
+	"spawnoffsety": 0,
+
+	"movepaused": true,
+	"transformenemyanimationonspawn": "snowpedodeletesnow",
+
+	"transformsinto": ["snowpedo","snowpedo shot"],
+	"transformtrigger": ["playernotnear","shot"],
+	"transformsetparameters": [["spawnoffsety",0],["transformenemyanimationonspawn","snowpedodeletesnow"]],
+	"transformsetparametersbeforespawn": true
+}

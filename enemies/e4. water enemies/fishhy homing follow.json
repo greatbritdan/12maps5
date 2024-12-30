@@ -1,0 +1,21 @@
+base=fishhy homing
+{	
+	"hidden": true,
+	"fixedvar": true,
+
+	"movement": "homing",
+	"homingspeed": 4,
+	"homingturnspeed": 4,
+	"stophomingdist": 0.75,
+	"homingrotation": 0,
+	"stophomingdistrotate": true,
+	"rotationishomingrotation": true,
+	"dontmirror": true,
+
+	"category": 6,
+	
+	"lifetime": 2.5,
+	"playerneardist": [0,-0.25,1,1],
+	"transformsinto": ["boomb","boomb","boomb"],
+	"transformtrigger": ["playernear","lifetime","shot"],
+}

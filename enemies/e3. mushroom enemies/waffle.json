@@ -1,0 +1,75 @@
+{
+	"quadcount": 8,
+	"nospritesets": true,
+	"dontmirror": true,
+	"showicononeditor": true,
+	
+	"width": 0.625,
+	"height": 0.625,
+	
+	"offsetX": 5,
+	"offsetY": 3,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+	"spawnoffsety": -0.1875,
+
+	"animationtype": "frames",
+	"animationstart": 1,
+	"animationframes": 4,
+	"animationspeed": 0.0625,
+
+	"gravity": 0,
+
+	"category": 6,
+	"mask": [true,
+		true, false, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true],
+		
+	"kills": true,
+
+	"spawnsenemy": "waffle child",
+	"spawnenemydelays": [99e99],
+	"spawnpassedparameters": ["wdistx","wdisty","wspeed","timer"],
+
+	"edible":true,
+	"copyability":"mirror",
+
+	"index": 0,
+	"timer": 0,
+	"customtimer": [
+		[0,["add","x"],["property","xoff"]],
+		[0,["add","y"],["property","yoff"]],
+		
+		[0,["set","temp"],1],
+		[0,["divide","temp"],["property","wcount"]],
+
+		[0,"spawnenemy"],
+		[0,["add","timer"],["property","temp"]],
+		[0,["if","timer","<=",1],["set","currentcustomtimerstage"],2],
+
+		[0,["set","instantdelete"],true]
+	],
+	"dontloopcustomtimer": true,
+
+	"xoff": 0,
+	"yoff": 0,
+	"rightclick": [
+		["text","count:"],
+		["input","wcount",3],
+		["text","distance x:"],
+		["input","wdistx",5],
+		["text","distance y:"],
+		["input","wdisty",5],
+		["text","speed:"],
+		["input","wspeed",5],
+		["text","offset:"],
+		["input","xoff",5],
+		["input","yoff",5]
+	],
+	"rightclicktypes": ["num","num","num","num","num","num"],
+	"rightclickdefaults": ["1","3","3","1","0","0"]
+}

@@ -1,0 +1,39 @@
+{
+	"hidden": true,
+
+	"quadcount": 1,
+	"nospritesets": true,
+	"dontmirror": true,
+	
+	"width": 0.5,
+	"height": 0.5,
+	
+	"offsetX": 4,
+	"offsetY": 4,
+	"quadcenterX": 6,
+	"quadcenterY": 6,
+	"spawnoffsetx": -0.5,
+	"spawnoffsety": -0.4375,
+
+	"bounces": true,
+	"bounceforce": 12,
+
+	"category": 6,
+	"mask": [true,
+		false, false, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true],
+		
+	"lifetime": 5,
+	"kills": true,
+
+	"edible":true,
+	"copyability":"snowball",
+
+	"transforms": true,
+	"transformsinto": "snowpedo ball hit",
+	"transformtrigger": ["leftcollide","rightcollide","lifetime"]
+}z

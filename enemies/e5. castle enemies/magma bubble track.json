@@ -1,0 +1,21 @@
+base=magma bubble
+{
+	"customtimer": [
+		[0,["if","oldx","notexists",""],["set","oldx"],["property","x"]],
+		[0,["if","oldy","notexists",""],["set","oldy"],["property","y"]],
+		[0,["set","distx"],["property","x"]],
+		[0,["set","disty"],["property","y"]],
+		[0,["subtract","distx"],["property","oldx"]],
+		[0,["subtract","disty"],["property","oldy"]],
+
+		[0,["atan2","rot"],[["property","distx"],["property","disty"]]],
+		[0,["reverse","rot"]],
+		[0,["add","rot"],1.5707],
+		[0,["set","rotation"],["property","rot"]],
+
+		[0,["set","oldx"],["property","x"]],
+		[0,["set","oldy"],["property","y"]],
+		[0,["set","customtimertimer"],0]
+	],
+	"rightclickmenu": false
+}

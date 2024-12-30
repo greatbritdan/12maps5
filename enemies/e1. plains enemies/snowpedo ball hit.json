@@ -1,0 +1,17 @@
+base=snowpedo ball
+{
+	"quadcount": 4,
+	"active": false,
+	"kills": false,
+	"transforms": false,
+
+	"spawnoffsetx": -0,
+	"spawnoffsety": -0,
+	
+	"animationtype": "frames",
+	"animationspeed": 0.03125,
+	"animationstart": 1,
+	"animationframes": 4,
+
+	"lifetime": 0.125,
+}

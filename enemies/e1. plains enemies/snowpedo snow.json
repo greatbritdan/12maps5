@@ -1,0 +1,29 @@
+base=snow
+{
+	"hidden": true,
+	
+	"quadcount": 1,
+	"rightclick": false,
+	"frozen": false,
+	"drawback": true,
+
+	"customtimer": [
+		[0,["set","quadgroupstore"],["property","quadgroup"]],
+		[0,["set","quadgroup"],["property","spawner"]],
+
+		[0,"setframe","x"],
+		[0,["set","x"],["property","quad"]],
+		[0,"setframe","y"],
+		[0,["set","y"],["property","quad"]],
+
+		[0,["set","quadgroup"],["property","quadgroupstore"]],
+		[0,"setframe",1],
+
+		[0,["set","customtimertimer"],0]
+	],
+
+	"transforms": true,
+	"transformsinto": "nil",
+	"transformtrigger": "animation",
+	"transformanimation": "snowpedodeletesnow"
+}
