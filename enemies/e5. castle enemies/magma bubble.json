@@ -1,4 +1,6 @@
 {
+	"t": "upfire",
+	
 	"quadcount": 4,
 	"nospritesets": true,
 	"dontmirror": true,
@@ -32,7 +34,7 @@
 	"animationspeed": 0.12,
 
 	"kills": true,
-	
+
 	"edible":true,
 	"copyability":"fire",
 
