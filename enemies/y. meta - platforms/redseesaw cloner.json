@@ -1,0 +1,107 @@
+{
+	"hidden": true,
+	"quadcount":1,
+	"nospritesets":true,
+	"trackspeed":0,
+
+	"description":"redseesaw cloner - follow the instructions in the gif",
+
+	"rightclickmenu":["transformsetparameters",
+		[["size",1], ["quadno", 1]],
+		[["size",2], ["quadno", 2]],
+		[["size",3], ["quadno", 3]],
+		[["size",4], ["quadno", 4]],
+		[["size",5], ["quadno", 5]],
+		[["size",6], ["quadno", 6]],
+		[["size",7], ["quadno", 7]],
+		[["size",8], ["quadno", 8]],
+		[["size",9], ["quadno", 9]],
+		[["size",10], ["quadno", 10]],
+		[["size",11], ["quadno", 11]],
+		[["size",12], ["quadno", 12]],
+		[["size",13], ["quadno", 13]],
+		[["size",14], ["quadno", 14]],
+		[["size",15], ["quadno", 15]],
+		[["size",16], ["quadno", 16]],
+		[["size",17], ["quadno", 17]],
+		[["size",18], ["quadno", 18]],
+		[["size",19], ["quadno", 19]],
+		[["size",20], ["quadno", 20]],
+		[["size",21], ["quadno", 21]],
+		[["size",22], ["quadno", 22]]
+	],
+	"rightclickmenutable":true,
+	"rightclickmenudisplay":["size","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22"],
+
+	"quadno": 1,
+
+	"spawnonload":true,
+
+	"width": 1,
+	"height": 1,
+	
+	"static": false,
+	"active": true,
+	
+	"category": 4,
+	"mask": [	true, 
+				false, true, false, false, true,
+				false, true, false, true, false,
+				false, false, false, false, false,
+				true, true, false, false, false,
+				false, true, true, false, false,
+				true, false, true, true, true,
+				false],
+
+	"transformsinto":"redseesaw catalyst",
+	"transformpassedparameters":["init","fakeupdate","draw","leftcollide","rightcollide","ceilcollide","floorcollide","globalcollide","passivecollide","dotrack"],
+	"transformpassedparmetersbeforespawn":false,
+	"transformsetparametersbeforespawn":true,
+
+	"customtimer":[
+		[0,["set","collidestore"],["property","floorcollide"]],
+		[0,["set","floorcollide"],["property","addoutput"]],
+
+		[0,["set","static"],false],
+		[0,["set","customtimertimer"],0],
+
+		[0,["set","quadgroup"],["property","outtable"]],
+		[0,"setframe",1],
+		[0,["set","quadgroup"],["property","quad"]],
+		[0,"setframe",2],
+		[0,["set","quadgroup"],["property","quad"]],
+
+		[0,"setframe","init"],
+		[0,["set","init"],["property","quad"]],
+		[0,"setframe","update"],
+		[0,["set","fakeupdate"],["property","quad"]],
+		[0,"setframe","draw"],
+		[0,["set","draw"],["property","quad"]],
+		[0,"setframe","leftcollide"],
+		[0,["set","leftcollide"],["property","quad"]],
+		[0,"setframe","rightcollide"],
+		[0,["set","rightcollide"],["property","quad"]],
+		[0,"setframe","ceilcollide"],
+		[0,["set","ceilcollide"],["property","quad"]],
+		[0,"setframe","globalcollide"],
+		[0,["set","globalcollide"],["property","quad"]],
+		[0,"setframe","floorcollide"],
+		[0,["set","floorcollide"],["property","quad"]],
+		[0,"setframe","passivecollide"],
+		[0,["set","passivecollide"],["property","quad"]],
+		[0,"setframe","dotrack"],
+		[0,["set","dotrack"],["property","quad"]],
+
+		[0,["set","spawnenemy"],["property","transform"]],
+		[0,["set","spawnsenemy"],["property","transformsinto"]],
+		[0,"spawnenemy"],
+
+		[1,"wait"]
+	],
+	"dontloopcustomtimer":true,
+
+	"offsetX": 8,
+	"offsetY": 0,
+	"quadcenterX": 8,
+	"quadcenterY": 8
+}

@@ -1,0 +1,45 @@
+{
+	"quadcount":1,
+	"nospritesets":true,
+	"graphiccolor":[0,0,0,0],
+
+	"width":0,
+	"height":0,
+
+	"spawnonload":true,
+
+	"category":6,
+	"mask": [	true, 
+			true, false, true, true, true,
+			true, true, true, true, true,
+			true, true, true, true, true,
+			true, true, true, true, true,
+			true, true, true, true, true,
+			true, true, true, true, true,
+			true],
+	"sticktoplayer":1,
+	"resistseverything":true,
+
+	"transforms":true,
+	"transformsinto":"track setup 2",
+	"transformtrigger":"mariocontact",
+	"transformpassedparameters":["releasefunc"],
+	"removeonmariocontact":true,
+
+	"customtimer":[
+		[0,["set","trackable"],false],
+		[0,["set","drawable"],false],
+
+		[0,["set","quadstore"],["property","quadgroup"]],
+		[0,["set","quadgroup"],["property","trackcontroller"]],
+
+		[0,"setframe","release"],
+		[0,["set","releasefunc"],["property","quad"]]
+	],
+	"dontloopcustomtimer":true,
+
+	"offsetX":0,
+	"offsetY":16,
+	"quadcenterX":8,
+	"quadcenterY":8,
+}

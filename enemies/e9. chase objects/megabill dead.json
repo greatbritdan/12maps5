@@ -1,0 +1,22 @@
+base=frost goomba shoot
+{
+	"quadcount": 1,
+	"width": 3.5,
+	"height": 7,
+	
+	"offsetX": 56,
+	"offsetY": -48,
+	"quadcenterX": 64,
+	"quadcenterY": 64,
+
+	"quadno": 1,
+	"customtimer": false,
+	"customtrigger": false,
+
+	"speedy": -24,
+	"speedx": -24,
+	"rotationanimation": true,
+	"rotationanimationspeed": -24,
+
+	"animationtriggerondeath": false
+}

@@ -1,0 +1,16 @@
+base=megabill hitbox1
+{
+	"width": 0.875,
+	"height": 2.375,
+	
+	"spawnoffsety": -2.3125,
+	"spawnoffsetx": 4.8125,
+
+	"transformtrigger": "enemynear",
+	"enemynearcheck": "megabill end",
+	"enemyneardist": [0,0,0.875,2.375],
+
+	"treattransformasdeath": true,
+	"transformenemyanimationondeath": "megabillend",
+	"animationtriggerondeath": "megabillend"
+}

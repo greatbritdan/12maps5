@@ -1,0 +1,53 @@
+{
+	"quadcount": 1,
+	"nospritesets": true,
+	
+	"width": 3.5,
+	"height": 7,
+	
+	"offsetX": 56,
+	"offsetY": -48,
+	"quadcenterX": 64,
+	"quadcenterY": 64,
+	"spawnoffsety": -0.5,
+		
+	"active": true,
+	"gravity": 0,
+	
+	"category": 11,
+	"mask": [true, 
+		false, false, false, false, false,
+		false, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true],
+	
+	"kills": true,
+	"killsenemies": true,
+
+	"breaksblocks": true,
+	"breakshardblocks": true,
+	"nocollidestops": true,
+	"ignoreplatform": true,
+
+	"spawnsenemy": "megabill hitbox1",
+	"spawnenemydelays": [99e99],
+
+	"customtimer": [
+		[0,["set","spawnenemyspeedx"],["property","speedx"]],
+		[0,"spawnenemy"],
+		[0,["set","spawnsenemy"],"megabill hitbox2"],
+		[0,"spawnenemy"],
+		[0,["set","spawnsenemy"],"megabill hitbox3"],
+		[0,"spawnenemy"],
+		[0,["set","spawnsenemy"],"megabill pusher"],
+		[0,"spawnenemy"]
+	],
+	"dontloopcustomtimer": true,
+
+	"transforms": true,
+	"transformsinto": "megabill dead",
+	"transformtrigger": "animation",
+	"transformanimation": "megabillend"
+}

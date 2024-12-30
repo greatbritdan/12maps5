@@ -1,0 +1,14 @@
+base=megabill
+{
+	"hidden": true,
+	"spawnsenemy": false,
+	"customtimer": false,
+
+	"width": 1.75,
+	"height": 5.75,
+	
+	"spawnoffsety": -0.625,
+	"spawnoffsetx": 2.625,
+
+	"transformsinto": "nil"
+}

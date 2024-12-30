@@ -1,0 +1,30 @@
+base=chase pipe black
+{
+	"hidden": true,
+
+	"spawnoffsetx": 0,
+	"spawnoffsety": 0,
+	"transforms": false,
+	"rightclick": false,
+	"drawback": false,
+
+	"mask": [true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true],
+
+	"spawnsenemy": "chase pipe black fling",
+	"spawnenemydelays": [99e99],
+	"spawnenemyspeedx": 12,
+	"spawnenemyspeedy": -18,
+	"spawnpassedparameters": ["offsetY","quadcenterY","height","flingquadno","breakquadno","flingspeed"],
+
+	"customtimer": [
+		[0,"setframe",["property","breakquadno"]],
+		[0,"spawnenemy"]
+	],
+	"dontloopcustomtimer": true
+}

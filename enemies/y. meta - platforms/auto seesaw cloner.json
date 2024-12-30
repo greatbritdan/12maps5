@@ -1,0 +1,54 @@
+base=redseesaw cloner
+{
+	"description":"auto seesaw cloner - follow the instructions in the gif",
+
+	"rightclickmenu":["speedfactor",1,0.015625,0.03125,0.0625,0.125,0.25,0.5,1.5,3,6,12,24,48],
+	"rightclickmenutable":false,
+	"rightclickmenudisplay":["speed","normal","barely moves","snail speed","ultra slow","very slow","slow","kinda slow","kinda fast","fast","very fast","ultra fast","way past fast","hyperspeed"],
+
+	"transformpassedparameters":["init","fakeupdate","draw","editordraw","leftcollide","rightcollide","ceilcollide","floorcollide","globalcollide","passivecollide","dotrack","size","quadid","speedfactor"],
+	"transformpassedparmetersbeforespawn":false,
+
+	"customtimer":[
+		[0,["set","collidestore"],["property","floorcollide"]],
+		[0,["set","floorcollide"],["property","addoutput"]],
+		[0,["set","static"],false],
+
+		[0,["set","customtimertimer"],0],
+
+		[0,["set","quadgroup"],["property","outtable"]],
+		[0,"setframe",1],
+		[0,["set","quadgroup"],["property","quad"]],
+		[0,"setframe",2],
+		[0,["set","quadgroup"],["property","quad"]],
+
+		[0,"setframe","size"],
+		[0,["set","size"],["property","quad"]],
+		[0,["set","quadid"],["property","quad"]],
+
+		[0,"setframe","init"],
+		[0,["set","init"],["property","quad"]],
+		[0,"setframe","update"],
+		[0,["set","fakeupdate"],["property","quad"]],
+		[0,"setframe","draw"],
+		[0,["set","draw"],["property","quad"]],
+		[0,"setframe","leftcollide"],
+		[0,["set","leftcollide"],["property","quad"]],
+		[0,"setframe","rightcollide"],
+		[0,["set","rightcollide"],["property","quad"]],
+		[0,"setframe","ceilcollide"],
+		[0,["set","ceilcollide"],["property","quad"]],
+		[0,"setframe","globalcollide"],
+		[0,["set","globalcollide"],["property","quad"]],
+		[0,"setframe","floorcollide"],
+		[0,["set","floorcollide"],["property","quad"]],
+		[0,"setframe","passivecollide"],
+		[0,["set","passivecollide"],["property","quad"]],
+		[0,"setframe","dotrack"],
+		[0,["set","dotrack"],["property","quad"]],
+		[0,["set","customtimeraction"],["property","transform"]],
+		[0,"auto seesaw catalyst"],
+		[1,"wait"]
+	],
+	"dontloopcustomtimer":true
+}

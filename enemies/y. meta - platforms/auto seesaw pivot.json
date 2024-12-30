@@ -1,0 +1,37 @@
+{
+	"quadcount":4,
+	"nospritesets":true,
+	"hidden":true,
+	"drawback":true,
+
+	"animationtype":"frames",
+	"animationspeed":0.1,
+	"animationstart":1,
+	"animationframes":4,
+
+	"width": 0.625,
+	"height": 0.625,
+
+	"active": false,
+
+	"customtimer":[
+		[0,["set","quadstore"],["property","quadgroup"]],
+		[0,["set","quadgroup"],["property","spawner"]],
+
+		[0,"setframe","x"],
+		[0,["set","x"],["property","quad"]],
+		[0,"setframe","y"],
+		[0,["set","y"],["property","quad"]],
+		[0,["subtract","x"],0.3125],
+		[0,["subtract","y"],0.6875],
+
+		[0,["set","quadgroup"],["property","quadstore"]],
+		[0,"setframe",["property","quadi"]],
+		[0,["set","customtimertimer"],0]
+	],
+
+	"offsetX": 5,
+	"offsetY": 3,
+	"quadcenterX": 5,
+	"quadcenterY": 5
+}

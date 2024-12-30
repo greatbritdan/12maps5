@@ -1,0 +1,57 @@
+{
+	"quadcount": 6,
+	"nospritesets": true,
+	"spawnonload":true,
+	"showicononeditor": true,
+
+	"width": 2,
+	"height": 2,
+
+	"offsetX": 16,
+	"offsetY": -8,
+	"quadcenterX": 16,
+	"quadcenterY": 16,
+	"spawnoffsety": 0.5,
+
+	"active": false,
+
+	"xrelativetocamera": 8.125,
+	"yrelativetocamera": 6.5,
+
+	"spawnsenemy": "clear letter",
+	"spawnenemydelays": [99e99],
+	"spawnpassedparameters": ["letteridx","xrelativetocamera"],
+
+	"letteridx": 1,
+	"customtimer": [
+		[0,"spawnenemy"],
+
+		[0.1,["add","xrelativetocamera"],1.5],
+		[0,["add","x"],1.5],
+		[0,["add","letteridx"],1],
+		[0,"spawnenemy"],
+
+		[0.1,["add","xrelativetocamera"],1.5],
+		[0,["add","x"],1.5],
+		[0,["add","letteridx"],1],
+		[0,"spawnenemy"],
+
+		[0.1,["add","xrelativetocamera"],1.5],
+		[0,["add","x"],1.5],
+		[0,["add","letteridx"],1],
+		[0,"spawnenemy"],
+
+		[0.1,["add","xrelativetocamera"],1.5],
+		[0,["add","x"],1.5],
+		[0,["add","letteridx"],1],
+		[0,"spawnenemy"],
+
+		[0.1,["add","xrelativetocamera"],1.5],
+		[0,["add","x"],1.5],
+		[0,["add","letteridx"],1],
+		[0,"spawnenemy"],
+
+		[0,["set","instantdelete"],true]
+	],
+	"dontloopcustomtimer": true
+}

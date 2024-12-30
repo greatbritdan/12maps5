@@ -1,0 +1,30 @@
+base=megabill hitbox1
+{
+	"quadcount": 4,
+
+	"width": 1,
+	"height": 14,
+	
+	"offsetX": 0,
+	"offsetY": -104,
+	"quadcenterX": 16,
+	"quadcenterY": 112,
+
+	"spawnoffsety": 3,
+	"spawnoffsetx": -3.25,
+
+	"animationtype": "frames",
+	"animationstart": 1,
+	"animationframes": 4,
+	"animationspeed": 0.05,
+	"dontmirror": true,
+
+	"breaksblocks": false,
+	"breakshardblocks": false,
+
+	"platform": true,
+	"platformchecktable": ["player"],
+	"platformpush": true,
+	"noplatformcarrying": true,
+	"solidkill": true
+}

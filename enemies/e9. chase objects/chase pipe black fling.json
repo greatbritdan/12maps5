@@ -1,0 +1,29 @@
+base=chase pipe black
+{
+	"hidden": true,
+	
+	"spawnoffsetx": 0,
+	"spawnoffsety": 0,
+	"transforms": false,
+	"rightclick": false,
+	"drawback": false,
+
+	"mask": [true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true],
+
+	"static": false,
+	"spawnsound": "blockbreak",
+	"rotationanimation": true,
+	"rotationanimationspeed": 0,
+
+	"customtimer": [
+		[0,["set","rotationanimationspeed"],["property","flingspeed"]],
+		[0,"setframe",["property","flingquadno"]]
+	],
+	"dontloopcustomtimer": true
+}

@@ -1,0 +1,46 @@
+base=redseesaw catalyst
+{
+	"quadcount": 15,
+
+	"animationtype":false,
+	"spawnsenemy":"auto seesaw pivot",
+
+	"reversetimer":0.6,
+	"reversetimerstart":1,
+	"varspeed":2,
+	"customtimer":[
+		[0,"spawnenemy"],
+		[0,["multiply","varspeed"],["property","speedfactor"]],
+		[0,["divide","reversetimerstart"],["property","speedfactor"]],
+		[0,["divide","reversetimer"],["property","speedfactor"]],
+
+		[0,["set","spawnenemy"],["property","fakeupdate"]],
+		[0,["set","spawnsenemy"],["property","customtimertimer"]],
+
+		[0,"setframe",["property","quadid"]],
+		[0,["set","speed"],["property","varspeed"]],
+
+		[0,["subtract","reversetimer"],["property","customtimertimer"]],
+		[0,["set","var1"],["property","reversetimer"]],
+		[0,["ceil","var1"]],
+		[0,["min","var1"],1],
+		[0,["multiply","var1"],2],
+		[0,["add","currentcustomtimerstage"],["property","var1"]],
+			[0,["reverse","varspeed"]],
+			[0,["add","reversetimer"],["property","reversetimerstart"]],
+
+		[0,["reverse","rotation"]],
+		[0,"spawnenemy"],
+		[0,["reverse","rotation"]],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],4]
+	],
+
+	"trackoffsety":0.375,
+	"offset":-0.6875,
+	"offsetX": 0,
+	"offsetY": 14,
+	"quadcenterX": 11,
+	"quadcenterY": 120
+}

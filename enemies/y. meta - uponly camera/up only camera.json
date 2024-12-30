@@ -1,0 +1,78 @@
+{
+	"quadcount": 1,
+	"nospritesets":true,
+	"trackable":false,
+
+	"spawnonload":true,
+	"spawnoffsety":1,
+	"width": 1,
+	"height": 1,
+
+	"static": true,
+	"activestatic":true,
+	"active": true,
+
+	"category": 2,
+	"ignoreceilcollide":true,
+	"ignoreleftcollide":true,
+	"ignorerightcollide":true,
+	"ignorefloorcollide":true,
+	"mask": [	true, 
+				true, true, false, true, true,
+				true, true, true, true, true,
+				true, true, true, true, true,
+				true, true, true, true, true,
+				true, true, true, true, true,
+				true, true, true, true, true,
+				true],
+
+	"description":"place above an energycatcher - one-way vertical camera - link a tile tool and cam stop",
+
+	"transformpassedparameters":["collide","trigger"],
+	"rightclickmenu":false,
+
+	"customtimer":[
+		[0,["set","collidestore"],["property","passivecollide"]],
+		[0,["set","passivecollide"],["property","addoutput"]],
+
+		[0,["set","customtimertimer"],0],
+
+		[0,"setframe",1],
+		[0,["set","quadstore"],["property","quad"]],
+		[0,["set","quadgroupstore"],["property","quadgroup"]],
+
+		[0,["set","quadgroup"],["property","outtable"]],
+		[0,"setframe",1],
+		[0,["set","quadgroup"],["property","quad"]],
+		[0,"setframe",2],
+		[0,["set","quadgroup"],["property","quad"]],
+
+		[0,"setframe","outtable"],
+		[0,["set","outtablestore"],["property","quad"]],
+		[0,["set","quadgroup"],["property","quad"]],
+		[0,"setframe",2],
+		[0,["set","quadgroup"],["property","quad"]],
+		[0,"setframe",1],
+		[0,["set","quadgroup"],["property","quad"]],
+		[0,"setframe","collide"],
+		[0,["set","collide"],["property","quad"]],
+
+		[0,["set","quadgroup"],["property","outtablestore"]],
+		[0,"setframe",1],
+		[0,["set","quadgroup"],["property","quad"]],
+		[0,"setframe",1],
+		[0,["set","quadgroup"],["property","quad"]],
+		[0,"setframe","trigger"],
+		[0,["set","trigger"],["property","quad"]],
+
+
+		[0,["set","customtimeraction"],["property","transform"]],
+		[0,"screen frame"]
+	],
+	"dontloopcustomtimer":true,
+
+	"offsetX": 8,
+	"offsetY": 8,
+	"quadcenterX": 8,
+	"quadcenterY": 16
+}

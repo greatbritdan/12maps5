@@ -1,0 +1,8 @@
+base=megabill hitbox1
+{
+	"width": 0.875,
+	"height": 4.375,
+	
+	"spawnoffsety": -1.3125,
+	"spawnoffsetx": 3.9375
+}
