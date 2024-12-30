@@ -1,0 +1,9 @@
+base=bounceshroom
+{
+	"hidden": true,
+
+	"transformsinto": "bounceshroom",
+	"transformtrigger": "lifetime",
+	"transformtriggerobjectcollide": "player",
+	"lifetime": 0.06
+}

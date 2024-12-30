@@ -1,0 +1,23 @@
+base=icey
+{
+	"hidden": true,
+	"rightclick": false,
+	"spawnoffsety": 0,
+
+	"spawnsound": "iciclefall",
+
+	"breaksblocks": true,
+	"breakblockside": "floor",
+	"killsenemies": true,
+
+	"transformsinto": "icey debris spawn",
+	"transformtrigger": "collide",
+	"dotransformaftercollision": true,
+	"playerneardist": false,
+
+	"customtimer": [
+		[0,"setframe",["property","quadno"]]
+	],
+
+	"static": false,
+}

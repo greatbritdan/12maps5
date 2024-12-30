@@ -1,0 +1,64 @@
+base=shop block
+{
+	"hidden": true,
+	"spawnoffsetx": 0,
+	"spawnoffsety": 0,
+
+	"bump": 0,
+	"bumpdt": 0,
+	"bumptimer": 0,
+	"customtimer": [
+		[0,["if",["property","shopblockbuy"],"~=",true],["add","currentcustomtimerstage"],13],
+			[0,["set","spawnsenemy"],["property","itemname"]],
+			[0,"--spawnenemy"],
+
+			[0,["set","playsoundstore"],["property","playsound"]],
+			[0,["set","playsound"],["property","triggeranimation"]],
+			[0,["add","shopupgrade"],1],
+			[0,["if","shopupgrade","==",1],"playsound",["property","shopupgrade1"]],
+			[0,["if","shopupgrade","==",2],"playsound",["property","shopupgrade2"]],
+			[0,["if","shopupgrade","~=",3],["add","currentcustomtimerstage"],5],
+				[0,["if","shopupgrade","==",3],"playsound",["property","shopupgrade3"]],
+				[0,["set","transforms"],false],
+				[0,["set","aninmationstart"],2],
+				[0,["set","quadi"],2],
+				[0,"setframe",2],
+
+		[0,["set","temp"],["property","startquadno"]],
+		[0,["add","temp"],["property","shopupgrade"]],
+		[0,"setframe",["property","temp"]],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","customtimertimer"],0],
+		[0,["set","transformtrigger"],["floorcollide"]],
+		[0,["set","transformsinto"],"shop block hit"],
+		[0,["set","treattransformasdeath"],true],
+		[0,["set","playsound"],["property","playsoundstore"]],
+		[0,"playsound","blockhit"],
+		[0,["set","animationtriggerondeath"],["property","storeanimationtriggerondeath"]],
+
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+		[0,["set","bumpdt"],["property","customtimertimer"]],
+		[0,["multiply","bumpdt"],16],
+
+		[0,["if","bumptimer",">=",3.142],["add","currentcustomtimerstage"],7],
+			[0,["add","bumptimer"],["property","bumpdt"]],
+			[0,["sin","bump"],["property","bumptimer"]],
+			[0,["multiply","bump"],8],
+			[0,["set","offsetY"],-4],
+			[0,["add","offsetY"],["property","bump"]],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],["property","loopline"]],
+
+		[0,["set","offsetY"],-4]
+	],
+	"dontloopcustomtimer": true,
+
+	"treattransformasdeath": false,
+	"transformsinto": "shop block buy",
+	"transformtrigger": "animation",
+	"transformanimation": "buyitem",
+	"transformpassedparameters": ["startquadno","itemname","storeanimationtriggerondeath","shopupgrade1","shopupgrade2","shopupgrade3","shopupgrade"]
+}

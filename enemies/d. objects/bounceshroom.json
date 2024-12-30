@@ -1,0 +1,103 @@
+{
+	"showicononeditor": true,
+
+	"drawback": true,
+	"quadcount": 7,
+	"nospritesets": true,
+	"spawnonload": true,
+
+	"resistsstar": true,
+	"resistsfire": true,
+	"freezable": false,
+	"solidkill": true,
+	"resistsenemykill": true,
+
+	"trackable": false,
+	"dontenterclearpipes": true,
+	
+	"width": 3,
+	"height": 1,
+	
+	"offsetX": 80,
+	"offsetY": 0,
+	"quadcenterX": 8,
+	"quadcenterY": 80,
+
+	"rotation": 1.571,
+	"doesntunrotate": true,
+	
+	"static": true,
+	"active": true,
+
+	"emancipatecheck": false,
+	"autodelete": false,
+	
+	"category": 4,
+	"mask": [true, 
+		false, false, false, false, true,
+		false, true, false, true, true,
+		false, false, false, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true],
+
+	"stompable": true,
+	"stompbounce": true,
+	"stompbouncejump": 3,
+	"stompbouncenojump": 2,
+
+	"resistseverything": true,
+
+	"ignoreleftcollide": true,
+	"ignorerightcollide": true,
+	"ignorefloorcollide": true,
+	"platformcollisionup": true,
+
+	"transforms": true,
+	"transformsinto": "bounceshroom bounce",
+	"transformtriggerobjectcollide": "player",
+	"transformtrigger": "ceilcollide",
+	"transformpassedparameters": ["width", "x", "quad", "quadi"],
+
+	"rightclickmenutable": true,
+	"rightclickmenumultipleproperties": true,
+	"rightclickmenu": ["this is cringe",
+		[
+			["width", 3],
+			["quadno", 1],
+			["spawnoffsetx", 1]
+		],
+		[
+			["width", 4],
+			["quadno", 2],
+			["spawnoffsetx", 1.5]
+		],
+		[
+			["width", 5],
+			["quadno", 3],
+			["spawnoffsetx", 2]
+		],
+		[
+			["width", 6],
+			["quadno", 4],
+			["spawnoffsetx", 2.5]
+		],
+		[
+			["width", 7],
+			["quadno", 5],
+			["spawnoffsetx", 3]
+		],
+		[
+			["width", 8],
+			["quadno", 6],
+			["spawnoffsetx", 3.5]
+		],
+		[
+			["width", 9],
+			["quadno", 7],
+			["spawnoffsetx", 4]
+		]
+	],
+	"rightclickmenudisplay": ["width", "3", "4", "5", "6", "7", "8", "9"],
+	"dontloopcustomtimer": true
+}

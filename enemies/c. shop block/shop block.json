@@ -1,0 +1,73 @@
+{
+	"quadcount": 17,
+	"nospritesets": true,
+	"drawback": true,
+	"spawnonload": true,
+
+	"width": 1.5,
+	"height": 1.5,
+	
+	"offsetX": 12,
+	"offsetY": -4,
+	"quadcenterX": 12,
+	"quadcenterY": 12,
+	"spawnoffsetx": 0,
+	"spawnoffsety": 0.25,
+
+	"static": true,
+	"resistseverything": true,
+	"ignoreplatform": true,
+	
+	"category": 2,
+	"mask": [true],
+
+	"storeanimationtriggerondeath": "buyitemcheck",
+	"customtimer": [
+		[0,["set","temp"],["property","startquadno"]],
+		[0,["add","temp"],["property","shopupgrade"]],
+		[0,"setframe",["property","temp"]],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","customtimertimer"],0],
+		[0,["set","animationtriggerondeath"],["property","storeanimationtriggerondeath"]],
+		[0,["set","transformpassedparameters"],["startquadno","itemname","storeanimationtriggerondeath","shopupgrade1","shopupgrade2","shopupgrade3","shopupgrade"]]
+	],
+	"dontloopcustomtimer": true,
+	
+	"transforms": true,
+	"treattransformasdeath": true,
+	"transformsinto": ["shop block hit","shop block u1","shop block u2","shop block u3"],
+	"transformtrigger": ["floorcollide","animation","animation","animation"],
+	"transformanimation": false,
+	"transformtriggerobjectcollide": "player",
+	"transformpassedparameters": ["startquadno","itemname","storeanimationtriggerondeath","shopupgrade1","shopupgrade2","shopupgrade3"],
+
+	"shopupgrade": 0,
+	"rightclick": [
+		["text","contents:"],
+		["dropdown",[
+			[
+				["startquadno",1],["itemname","eternal flame"],["transformanimation",["","shopfire1","shopfire2","shopfire3"]],
+				["shopupgrade1","shopfire1"],["shopupgrade2","shopfire2"],["shopupgrade3","shopfire3"]
+			],
+			[
+				["startquadno",5],["itemname","frostbite flower"],["transformanimation",["","shopice1","shopice2","shopice3"]],
+				["shopupgrade1","shopice1"],["shopupgrade2","shopice2"],["shopupgrade3","shopice3"]
+			],
+			[
+				["startquadno",9],["itemname","snow cannon"],["transformanimation",["","shopsnow1","shopsnow2","shopsnow3"]],
+				["shopupgrade1","shopsnow1"],["shopupgrade2","shopsnow2"],["shopupgrade3","shopsnow3"]
+			],
+			[
+				["startquadno",13],["itemname","dynamite"],["transformanimation",["","shopdynfo1","shopdynfo2","shopdynfo3"]],
+				["shopupgrade1","shopdynfo1"],["shopupgrade2","shopdynfo2"],["shopupgrade3","shopdynfo3"]
+			],
+			[
+				["startquadno",17],["itemname",""],["transformanimation",["","","",""]],
+				["shopupgrade1",""],["shopupgrade2",""],["shopupgrade3",""],["transforms",false]
+			]
+		],15,["eternal flame","frostbite flower","snow cannon","dynamite","no item"]]
+	],
+	"rightclicktypes": ["string"],
+	"rightclickdefaults": ["eternal flame"]
+}

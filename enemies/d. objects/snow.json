@@ -1,0 +1,48 @@
+{
+	"hitboxcolor": [255,255,255,0],
+	
+	"quadcount": 6,
+	"nospritesets": true,
+	"dontmirror": true,
+	"drawback": true,
+	"frozen": true,
+	
+	"width": 0.75,
+	"height": 0.25,
+	
+	"offsetX": 6,
+	"offsetY": 4,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+	
+	"static": true,
+	"active": false,
+	"autodelete": false,
+	
+	"category": 5,
+	"mask": [true,
+		false, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true],
+
+	"jumpsfromblocksbelow": true,
+	"jumpforce": 10,
+	"notkilledfromblocksbelow": true,
+
+	"casesensitive": true,
+	"rightclick": [
+		["text","frame:"],
+		["dropdown","quadno",7,[1,2,3,4,5,6],["left","middle","right","single","slope l","slope r"]],
+		["text","offset y"],
+		["input","spawnoffsety",5],
+		["checkbox",[
+			[["static",false],["active",true],["gravity",80]],
+			[["gravity",0]]
+		],"gravity?"]
+	],
+	"rightclicktypes": ["num","num","bool"],
+	"rightclickdefaults": ["2","0","false"]
+}

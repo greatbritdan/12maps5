@@ -1,0 +1,24 @@
+base=frost goomba
+{
+	"quadcenterX": 12,
+
+	"animationtype": "frames",
+	"animationspeed": 0.1,
+	"animationstart": 1,
+	"animationframes": 4,
+	"turnaroundoncliff": false,
+
+	"gravity": 10,
+	"bounces": true,
+	"bounceforce": 7,
+
+	"rightclick": [
+		["text","type:"],
+		["dropdown","varient",10,[1,2,3,4,5,6,7,8,9,10,11],["normal","hat (r)","hat (b)","reindeer","tinsel (r)","tinsel (b)","bow (r)","bow (b)","cursed","goombruh","golden"]],
+		["text","offset:"],
+		["input","spawnoffsetx",6],
+		["checkbox","fixedvar","fixed?"]
+	],
+	"rightclicktypes": ["num","num","bool"],
+	"rightclickdefaults": ["1","0","false"]
+}

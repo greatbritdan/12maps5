@@ -1,0 +1,33 @@
+{
+	"hitboxcolor": [255,255,255],
+	
+	"quadcount": 1,
+	"nospritesets": true,
+	"dontmirror": true,
+	"drawback": true,
+
+	"width": 2,
+	"height": 2,
+	
+	"offsetX": 16,
+	"offsetY": 8,
+	"quadcenterX": 16,
+	"quadcenterY": 16,
+	
+	"active": false,
+
+	"temp": 0,
+	"timer": 0,
+	"customtimer": [
+		[0,["set","temp"],["property","customtimertimer"]],
+		[0,["multiply","temp"],4],
+		[0,["add","timer"],["property","temp"]],
+
+		[0,["sin","temp"],["property","timer"]],
+		[0,["divide","temp"],4],
+		[0,["set","x"],["property","startx"]],
+		[0,["add","x"],["property","temp"]],
+
+		[0,["set","customtimertimer"],0]
+	]
+}

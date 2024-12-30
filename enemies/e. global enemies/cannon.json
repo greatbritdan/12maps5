@@ -1,0 +1,54 @@
+{	
+	"quadcount": 4,
+	"nospritesets": true,
+	
+	"offsetX": 6,
+	"offsetY": -2,
+	"quadcenterX": 8,
+	"quadcenterY": 14,
+	
+	"width": 0.75,
+	"height": 1.5,
+
+	"static": true,
+
+	"category": 4,
+	"mask": [true,
+		true, false, true, true, true,
+		true, true, true, true, true,
+		true, false, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true],
+
+	"resistseverything": true,
+	"ignoreplatform": true,
+	
+	"spawnsenemy": "cannon ball",
+	"spawnenemydelays": [3],
+	"spawnenemyoffsetx": 0.5,
+	"spawnenemyoffsety": -0.5625,
+	"spawnenemyspeedx": -12,
+
+	"customtimer": [
+		[0,["if",["property","etype"],"==","left"],["set","quadno"],1],
+		[0,["if",["property","etype"],"==","left"],["set","spawnenemyspeedx"],-12],
+		[0,["if",["property","etype"],"==","right"],["set","quadno"],2],
+		[0,["if",["property","etype"],"==","right"],["set","spawnenemyspeedx"],12],
+		[0,["if",["property","etype"],"==","fast-left"],["set","quadno"],3],
+		[0,["if",["property","etype"],"==","fast-left"],["set","spawnenemyspeedx"],-16],
+		[0,["if",["property","etype"],"==","fast-left"],["set","spawnenemydelays"],[2]],
+		[0,["if",["property","etype"],"==","fast-right"],["set","quadno"],4],
+		[0,["if",["property","etype"],"==","fast-right"],["set","spawnenemyspeedx"],16],
+		[0,["if",["property","etype"],"==","fast-right"],["set","spawnenemydelays"],[2]]
+	],
+	"dontloopcustomtimer": true,
+
+	"rightclick": [
+		["text","type:"],
+		["dropdown","etype",12,["left","right","fast-left","fast-right"]]
+	],
+	"rightclicktypes": ["string"],
+	"rightclickdefaults": ["left"]
+}

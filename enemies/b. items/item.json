@@ -1,0 +1,42 @@
+base=shroom
+{
+	"quadcount": 5,
+	"animationtype": "none",
+
+	"removeonmariocontact": false,
+	"makesmariogrow": false,
+
+	"spawnsenemy": "white poof",
+	"spawnenemydelays": [99e99],
+
+	"upgrade": 0,
+	"customtimer": [
+		[0,["set","customtimertimer"],0],
+		[0,["set","customtimertimer"],0],
+
+		[0,"print","upgrade"],
+		[0,["set","temp"],["property","upgrade"]],
+		[0,["add","temp"],1],
+
+		[0,["set","quadgroupstore"],["property","quadgroup"]],
+		[0,["set","quadgroup"],["property","upgradelist"]],
+		[0,"setframe",["property","temp"]],
+		[0,["set","upgradeshoot"],["property","quad"]],
+		[0,["set","quadgroup"],["property","quadgroupstore"]],
+
+		[0,["set","temp"],2],
+		[0,["add","temp"],["property","upgrade"]],
+		[0,"setframe",["property","temp"]],
+
+		[0,"spawnenemy"],
+
+		[0,["set","removeonmariocontact"],true],
+		[0,["set","makesmariogrow"],3],
+		[0,["set","makesmarioshoot"],["property","upgradeshoot"]],
+		[0,["set","makesmariocolor"],["property","upgradecolor"]]
+	],
+	"dontloopcustomtimer": true,
+
+	"transforms": true,
+	"transformtrigger": ["animation","animation","animation"],
+}

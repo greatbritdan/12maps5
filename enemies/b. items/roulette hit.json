@@ -1,0 +1,46 @@
+base=roulette
+{
+	"hidden": true,
+	
+	"quadno": 1,
+	"deathsound": false,
+	"spawnsound": "mushroomappear",
+
+	"spawnsenemy": "nil",
+	"spawnenemydelays": [99e99],
+	"spawnenemyoffsety": -1,
+
+	"bump": 0,
+	"bumpdt": 0,
+	"bumptimer": 0,
+	"customtimer": [
+		[0,["set","savedquadgroup"],["property","quadgroup"]],
+		[0,["set","quadgroup"],["property","itemnames"]],
+		[0,"setframe",["property","itemopt"]],
+		[0,["set","spawnsenemy"],["property","quad"]],
+		[0,["set","quadgroup"],["property","savedquadgroup"]],
+		[0,"setframe",1],
+
+		[0,["set","startoffset"],["property","offsetY"]],
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+		[0,["set","bumpdt"],["property","customtimertimer"]],
+		[0,["multiply","bumpdt"],16],
+
+		[0,["if","bumptimer",">=",3.142],["add","currentcustomtimerstage"],7],
+			[0,["add","bumptimer"],["property","bumpdt"]],
+			[0,["sin","bump"],["property","bumptimer"]],
+			[0,["multiply","bump"],6],
+			[0,["set","offsetY"],["property","startoffset"]],
+			[0,["add","offsetY"],["property","bump"]],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],["property","loopline"]],
+
+		[0,"spawnenemy"],
+		[0,["set","offsetY"],["property","startoffset"]]
+	],
+	"dontloopcustomtimer": true,
+
+	"transforms": false
+}

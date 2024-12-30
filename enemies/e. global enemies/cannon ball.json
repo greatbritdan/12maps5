@@ -1,0 +1,44 @@
+{
+	"hidden": true,
+
+	"quadcount": 4,
+	"nospritesets": true,
+	"dontmirror": true,
+	
+	"width": 0.5,
+	"height": 0.5,
+	
+	"offsetX": 4,
+	"offsetY": 4,
+	"quadcenterX": 6,
+	"quadcenterY": 6,
+	"spawnoffsetx": -0.5,
+	"spawnoffsety": -0.4375,
+
+	"gravity": 0,
+
+	"category": 6,
+	"mask": [true,
+		false, false, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true,
+		true, true, true, true, true],
+		
+	"lifetime": 5,
+	"kills": true,
+
+	"edible":true,
+	"copyability":"stone",
+	
+	"spawnsound": "cannonfast",
+	"dontplaysoundsoffscreen": true,
+
+	"breaksblocks": true,
+	"breaksentityblocks": true,
+
+	"transforms": true,
+	"transformsinto": "cannon ball hit",
+	"transformtrigger": ["leftcollide","rightcollide","lifetime"]
+}z

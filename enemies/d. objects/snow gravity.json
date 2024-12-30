@@ -1,0 +1,9 @@
+base=snow
+{
+	"hidden": true,
+	"rightclick": false,
+
+	"static": false,
+	"active": true,
+	"gravity": 80,
+}

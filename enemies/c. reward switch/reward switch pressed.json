@@ -1,0 +1,12 @@
+base=reward switch
+{
+	"hidden": true,
+	
+	"width": 0.75,
+	"height": 0.25,
+	"quadno": 2,
+	"offsetY": 12,
+
+	"animationtriggeronspawn": "rewardswitch",
+	"transforms": false
+}

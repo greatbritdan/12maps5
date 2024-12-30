@@ -1,0 +1,35 @@
+{
+	"quadcount": 1,
+	"nospritesets": true,
+	"spawnonload": true,
+	"showicononeditor": true,
+
+	"width": 1,
+	"height": 1,
+	
+	"offsetX": 8,
+	"offsetY": 0,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+
+	"active": false,
+
+	"customtimer": [
+		[0,["set","temp"],["property","animname"]],
+		[0,["concat","temp"],["property","animidx"]],
+		[0,["set","playsound"],["property","triggeranimation"]],
+		[0,"playsound",["property","temp"]],
+		[0,["set","instantdelete"],true]
+	],
+	"dontloopcustomtimer": true,
+
+	"animname": "spred",
+	"rightclick": [
+		["text","powerup:"],
+		["dropdown","animname",15,["shopfire","shopice","shopsnow","shopdynfo","???"],["eternal flame","frostbite flower","snow cannon","dynamite","???"]],
+		["text","upgrade:"],
+		["dropdown","animidx",6,["0","1","2","3"]]
+	],
+	"rightclicktypes": ["string","string"],
+	"rightclickdefaults": ["shopfire","3"]
+}

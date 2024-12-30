@@ -1,0 +1,91 @@
+{
+	"description": "blue platform - will fall when touched by player - right click for width",
+	
+	"quadcount": 10,
+	"nospritesets": true,
+	"drawback": true, 
+
+	"width": 3,
+	"height": 0.5,
+
+	"offsetX": 80,
+	"offsetY": 0,
+	"quadcenterX": 80,
+	"quadcenterY": 8,
+	"spawnoffsetY": -0.495,
+
+	"ignoreleftcollide": true,
+	"ignorerightcollide": true,
+	"ignorefloorcollide": true,
+	"platformcollisionup": true,
+
+	"trackable": true,
+	"dontenterclearpipe": true,
+	"portalable": false,
+	
+	"static": true,
+	"active": true,
+
+	"autodelete": true,
+	"emanipationcheck": false,
+
+	"category": 15,
+	"mask": [true],
+
+	"ignoreplatform": true,
+
+	"notkilledfromblocksbelow": true,
+	"resistseverything": true,
+	
+	"transforms": true,
+	"transformsinto": ["platformfalltrack", "platformfalling"],
+	"transformtrigger": ["tracked", "ceilcollide"],
+	"transformtriggerobjectcollide": ["-", "player"],
+	"transformpassedparameters": ["width", "x", "quad", "quadi"],
+
+	"rightclickmenutable": true,
+	"rightclickmenumultipleproperties": true,
+	"rightclickmenu": ["this is cringe",
+		[
+			["width", 1],
+			["quadno", 1]
+		],
+		[
+			["width", 2],
+			["quadno", 2]
+		],
+		[
+			["width", 3],
+			["quadno", 3]
+		],
+		[
+			["width", 4],
+			["quadno", 4]
+		],
+		[
+			["width", 5],
+			["quadno", 5]
+		],
+		[
+			["width", 6],
+			["quadno", 6]
+		],
+		[
+			["width", 7],
+			["quadno", 7]
+		],
+		[
+			["width", 8],
+			["quadno", 8]
+		],
+		[
+			["width", 9],
+			["quadno", 9]
+		],
+		[
+			["width", 10],
+			["quadno", 10]
+		]
+	],
+	"rightclickmenudisplay": ["width", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+}

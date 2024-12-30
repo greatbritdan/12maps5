@@ -1,0 +1,22 @@
+base=frost goomba
+{
+	"hidden": true,
+	"trackable": false,
+	"animationtype": false,
+	"active": false,
+
+	"quadno": 3,
+	"customtimer": [
+		[0,"setframe",["property","e_stompframe"]],
+		[0,["if","varient","==",11],["set","transformsinto"],"coin block 10"],
+	],
+	"dontloopcustomtimer": true,
+
+	"treattransformasdeath": true,
+	"transformsinto": "coin block",
+	"transformtrigger": "lifetime",
+	"transformpassedparameters": false,
+	"transformdontsupersize": true,
+
+	"lifetime": 0.5
+}

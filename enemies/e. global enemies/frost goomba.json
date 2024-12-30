@@ -1,0 +1,85 @@
+{	
+	"quadcount": 44,
+	"nospritesets": true,
+
+	"offsetX": 6,
+	"offsetY": 3,
+	"quadcenterX": 8,
+	"quadcenterY": 16,
+	
+	"width": 0.75,
+	"height": 0.75,
+
+	"animationtype": "frames",
+	"animationspeed": 0.2,
+	"animationstart": 1,
+	"animationframes": 2,
+	
+	"category": 4,
+	"mask": [true, 
+		false, false, false, false, true,
+		false, true, false, true, false,
+		false, false, true, false, false,
+		true, true, false, false, false,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false, true],
+
+	"movement": "truffleshuffle",
+	"truffleshufflespeed": 2.5,
+	"truffleshuffleacceleration": 16,
+	"turnaroundoncliff": true,
+
+	"stompable": true,
+	"stompanimation": true,
+
+	"killsonsides": true,
+	"killsonbottom": true,
+
+	"transforms": true,
+	"transformsinto": ["frost goomba stomp","frost goomba shoot"],
+	"transformtrigger": ["stomp","shot"],
+	"transformpassedparameters": ["animationdirection","direction","e_stompframe","e_shotframe","varient"],
+
+	"varient": 1,
+	"fixedvar": false,
+	"customtimer": [
+		[0,["if","fixedvar","==",true],["add","currentcustomtimerstage"],10],
+			[0,["set","varient"],1],
+			[0,["random","varchance"],[0,0,0,1,1]],
+			[0,["if","varchance","==",0],["add","currentcustomtimerstage"],7],
+				[0,["random","varchance"],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]],
+				[0,["floor","varchance"]],
+				[0,["if","varchance","==",0],["add","currentcustomtimerstage"],2],
+					[0,["set","varient"],11],
+					[0,["add","currentcustomtimerstage"],2],
+				[0,"else"],
+					[0,["random","varient"],[2,3,4,5,6,7,8,9,10]],
+
+		[0,["set","startidx"],["property","varient"]],
+		[0,["subtract","startidx"],1],
+		[0,["multiply","startidx"],4],
+		[0,["add","startidx"],1],
+		[0,"print","startidx"],
+
+		[0,["set","animationstart"],["property","startidx"]],
+		[0,["set","quadi"],["property","startidx"]],
+		[0,["set","quadno"],["property","startidx"]],
+		[0,["set","e_stompframe"],["property","startidx"]],
+		[0,["add","e_stompframe"],2],
+		[0,["set","e_shotframe"],["property","startidx"]],
+		[0,["add","e_shotframe"],3],
+
+		[0,["set","dontloopcustomtimer"],true]
+	],
+
+	"rightclick": [
+		["text","type:"],
+		["dropdown","varient",10,[1,2,3,4,5,6,7,8,9,10,11],["normal","hat (r)","hat (b)","reindeer","tinsel (r)","tinsel (b)","bow (r)","bow (b)","cursed","goombruh","golden"]],
+		["text","offset:"],
+		["input","spawnoffsetx",6],
+		["checkbox","fixedvar","fixed?"]
+	],
+	"rightclicktypes": ["num","num","bool"],
+	"rightclickdefaults": ["1","0","false"]
+}

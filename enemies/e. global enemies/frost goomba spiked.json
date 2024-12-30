@@ -1,0 +1,14 @@
+base=frost goomba
+{	
+	"truffleshufflespeed": 1.25,
+	"truffleshuffleacceleration": 8,
+
+	"stompable": false,
+	"killsontop": true,
+
+	"edible":true,
+	"copyability":"needle",
+
+	"transformsinto": ["frost goomba spiked shoot"],
+	"transformtrigger": ["shot"]
+}

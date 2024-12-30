@@ -1,0 +1,15 @@
+base=platformfall
+{
+	"hidden": true,
+
+	"static": false,
+
+	"gravity": 8,
+
+	"spawnoffsetY": 0,
+
+	"transforms": false,
+
+	"platform": true,
+	"platformchecktable": ["player", "goomba", "koopa", "enemy", "mushroom", "oneup"],
+}

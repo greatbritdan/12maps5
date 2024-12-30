@@ -1,0 +1,27 @@
+base=icey
+{
+	"hidden": true,
+	"rightclick": false,
+	"spawnoffsety": 0,
+
+	"lifetime": 0.25,
+
+	"transformsinto": ["icey fall","icey debris spawn"],
+	"transformtrigger": ["lifetime","shot"],
+	"playerneardist": false,
+
+	"timer": 0,
+	"customtimer": [
+		[0,"setframe",["property","quadno"]],
+		[0,["add","timer"],["property","customtimertimer"]],
+
+		[0,["set","sintimer"],["property","timer"]],
+		[0,["multiply","sintimer"],48],
+		[0,["sin","sin"],["property","sintimer"]],
+		[0,["set","offsetX"],4],
+		[0,["add","offsetX"],["property","sin"]],
+
+		[0,["set","customtimertimer"],0],
+	],
+	"dontloopcustomtimer": false,
+}

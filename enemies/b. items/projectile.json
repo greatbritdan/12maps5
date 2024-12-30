@@ -1,0 +1,32 @@
+{
+	"hidden": true,
+	
+	"quadcount": 1,
+	"nospritesets": true,
+
+	"offsetX": 3,
+	"offsetY": 5,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+
+	"width": 0.375,
+	"height": 0.375,
+
+	"category": 13,
+	"mask": [true,
+		false, true, false, false, true,
+		false, true, false, true, false,
+		false, true, false, true, false,
+		true, true, false, false, false,
+		false, true, false, false, true,
+		false, false, false, false, true,
+		false, true],
+
+	"resistseverything": true,
+	"ignoreplatform": true,
+	"autodelete": true,
+
+	"bounces": true,
+	"bounceforce": 12,
+	"reflectsx": true
+}

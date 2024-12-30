@@ -1,0 +1,22 @@
+base=sawy
+{
+	"quadcenterY": 12,
+	"spawnoffsetx": 0.5,
+	"spawnoffsety": 1.5,
+
+	"height": 1.25,
+
+	"movement": "piston",
+	"pistondistx": 0,
+	"pistondisty": -1.5,
+	"pistonspeedx": 0,
+	"pistonspeedy": 3,
+
+	"pistonextendtime": 1,
+	"pistonretracttime": 2,
+	"dontpistonnearplayer": true,
+	"dontpistondist": 3,
+
+	"customscissor": [0,-1,2,2],
+	"doesntunrotate": true
+}

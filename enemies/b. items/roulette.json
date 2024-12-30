@@ -1,0 +1,114 @@
+{
+	"quadcount": 10,
+	"nospritesets": true,
+	"drawback": true,
+	"spawnonload": true,
+
+	"width": 1,
+	"height": 1,
+	
+	"offsetX": 8,
+	"offsetY": 0,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+
+	"static": true,
+	"resistseverything": true,
+	"ignoreplatform": true,
+
+	"category": 2,
+	"mask": [true],
+
+	"blockportaltile": true,
+	"dontremoveblockportaltileondeath": true,
+
+	"transforms": true,
+	"treattransformasdeath": true,
+	"transformsinto": "roulette hit",
+	"transformtrigger": "floorcollide",
+	"transformtriggerobjectcollide": "player",
+	"transformpassedparameters": ["itemopt"],
+	"deathsound": "blockhit",
+
+	"timer": 0,
+	"customtimer": [
+		[0,["set","savedquadgroup"],["property","quadgroup"]],
+		[0,["set","itemopt"],["property","itemopt1"]],
+		[0,["set","quadgroup"],["property","itemquads"]],
+		[0,"setframe",["property","itemopt"]],
+		[0,["set","quadgroup"],["property","savedquadgroup"]],
+		[0,"setframe",["property","quad"]],
+		
+		[0,["add","timer"],["property","customtimertimer"]],
+		[0,["if","timer","<",["property","roulettespeed"]],["add","currentcustomtimerstage"],15],
+			[0,["subtract","timer"],["property","roulettespeed"]],
+
+			[0,["add","itemoptidx"],1],
+			[0,["if","itemoptidx","==",3,"and","itemopt3","==","_ignore"],["set","itemoptidx"],1],
+			[0,["if","itemoptidx","==",4,"and","itemopt4","==","_ignore"],["set","itemoptidx"],1],
+			[0,["if","itemoptidx","==",5,"and","itemopt5","==","_ignore"],["set","itemoptidx"],1],
+			[0,["if","itemoptidx","==",6],["set","itemoptidx"],1],
+
+			[0,["if","itemoptidx","==",1],["set","itemopt"],["property","itemopt1"]],
+			[0,["if","itemoptidx","==",2],["set","itemopt"],["property","itemopt2"]],
+			[0,["if","itemoptidx","==",3],["set","itemopt"],["property","itemopt3"]],
+			[0,["if","itemoptidx","==",4],["set","itemopt"],["property","itemopt4"]],
+			[0,["if","itemoptidx","==",5],["set","itemopt"],["property","itemopt5"]],
+
+			[0,["set","quadgroup"],["property","itemquads"]],
+			[0,"setframe",["property","itemopt"]],
+			[0,["set","quadgroup"],["property","savedquadgroup"]],
+			[0,"setframe",["property","quad"]],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],6]
+	],
+
+
+	"itemopt": "",
+	"itemoptidx": 1,
+	"itemnames": {
+		"_used":"nil",
+		"1 coin":"coin block 1",
+		"5 coins":"coin block 5",
+		"10 coins":"coin block 10",
+		"mushroom":"shroom spawn",
+		"eternal flame":"fire flower spawn",
+		"frostbite flower":"ice flower spawn",
+		"snow cannon":"snow flower spawn",
+		"dynamite":"dynamite spawn",
+		"???":"nil"
+	},
+	"itemquads": {
+		"_used":1,
+		"1 coin":2,
+		"5 coins":3,
+		"10 coins":4,
+		"mushroom":5,
+		"eternal flame":6,
+		"frostbite flower":7,
+		"snow cannon":8,
+		"dynamite":9,
+		"???":10
+	},
+
+	"itemopt1": "1 coin",
+	"itemopt2": "5 coins",
+	"itemopt3": "1 coin",
+	"itemopt4": "10 coins",
+	"itemopt5": "1 coin",
+	"roulettespeed": 0.125,
+
+	"rightclick": [
+		["text","items:"],
+		["dropdown","itemopt1",15,["1 coin","5 coins","10 coins","mushroom","eternal flame","frostbite flower","snow cannon","dynamite"]],
+		["dropdown","itemopt2",15,["1 coin","5 coins","10 coins","mushroom","eternal flame","frostbite flower","snow cannon","dynamite"]],
+		["dropdown","itemopt3",15,["1 coin","5 coins","10 coins","mushroom","eternal flame","frostbite flower","snow cannon","dynamite","_ignore"]],
+		["dropdown","itemopt4",15,["1 coin","5 coins","10 coins","mushroom","eternal flame","frostbite flower","snow cannon","dynamite","_ignore"]],
+		["dropdown","itemopt5",15,["1 coin","5 coins","10 coins","mushroom","eternal flame","frostbite flower","snow cannon","dynamite","_ignore"]],
+		["text","speed:"],
+		["input","roulettespeed",5]
+	],
+	"rightclicktypes": ["string","string","string","string","string","num"],
+	"rightclickdefaults": ["1 coin","5 coins","1 coin","10 coins","1 coin","0.125"]
+}

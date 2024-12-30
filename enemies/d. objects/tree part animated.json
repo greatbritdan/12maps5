@@ -1,0 +1,7 @@
+base=tree part
+{
+	"animationtype": "frames",
+	"animationstart": 1,
+	"animationframes": 4,
+	"animationspeed": 0.25,
+}

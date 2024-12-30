@@ -1,0 +1,22 @@
+{
+	"quadcount": 2,
+	"nospritesets": true,
+
+	"width": 0.75,
+	"height": 0.875,
+	
+	"offsetX": 6,
+	"offsetY": 2,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+
+	"resistseverything": true,
+	"ignoreplatform": true,
+	
+	"static": true,
+
+	"transforms": true,
+	"transformsinto": "reward switch pressed",
+	"transformtrigger": "ceilcollide",
+	"transformtriggerobjectcollide": "player"
+}

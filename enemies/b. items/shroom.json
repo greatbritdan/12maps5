@@ -1,0 +1,35 @@
+{
+	"quadcount": 4,
+	"nospritesets": true,
+
+	"offsetX": 6,
+	"offsetY": 4,
+	"quadcenterX": 8,
+	"quadcenterY": 8,
+	
+	"animationtype": "frames",
+	"animationframes": 4,
+	"animationstart": 1,
+	"animationspeed": 0.125,
+	
+	"width": 0.75,
+	"height": 0.75,
+	"autodelete": true,
+	
+	"category": 6,
+	"mask": [true,
+		false, false, true, true, true,
+		false, true, false, true, true,
+		false, true, true, false, true,
+		true, true, false, true, true,
+		false, true, true, false, false,
+		true, false, true, true, true,
+		false],
+
+	"makesmariogrow": true,
+	"removeonmariocontact": true,
+
+	"notkilledfromblocksbelow": true,
+	"jumpsfromblocksbelow": true,
+	"jumpforce": 10
+}

@@ -1,0 +1,6 @@
+base=tree
+{
+	"hidden": true,
+	"rightclick": false,
+	"customtimer": false
+}

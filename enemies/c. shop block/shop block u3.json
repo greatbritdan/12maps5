@@ -1,0 +1,7 @@
+base=shop block u1
+{
+	"shopupgrade": 3,
+
+	"transforms": false,
+	"dontloopcustomtimer": true,
+}

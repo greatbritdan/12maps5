@@ -1,0 +1,11 @@
+base=shop block hit
+{
+	"hidden": true,
+	"shopblockbuy": true,
+
+	"spawnsound": "blockbreak",
+
+	"spawnsenemy": "nil",
+	"spawnenemydelays": [99e99],
+	"spawnenemyspeedy": -18,
+}

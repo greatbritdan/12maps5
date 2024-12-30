@@ -1,0 +1,30 @@
+base=icey
+{
+	"hidden": true,
+	"rightclick": false,
+	"transforms": false,
+	"spawnoffsety": 0,
+	"playerneardist": false,
+	"active": false,
+
+	"spawnsound": "icicle",
+
+	"spawnsenemy": "icey debris",
+	"spawnenemydelays": [99e99],
+	"spawnpassedparameters": ["erng"],
+
+	"customtimer": [
+		[0,["set","spawnenemyspeedy"],-12],
+		[0,["set","spawnenemyspeedx"],4],
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyspeedx"],-4],
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyspeedy"],-18],
+		[0,["set","spawnenemyspeedx"],4],
+		[0,"spawnenemy"],
+		[0,["set","spawnenemyspeedx"],-4],
+		[0,"spawnenemy"],
+		[0,["set","instantdelete"],true]
+	],
+	"dontloopcustomtimer": true
+}

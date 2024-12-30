@@ -1,0 +1,9 @@
+base=shop block
+{
+	"hidden": true,
+	"spawnoffsetx": 0,
+	"spawnoffsety": 0,
+	"rightclick": false,
+
+	"shopupgrade": 1
+}

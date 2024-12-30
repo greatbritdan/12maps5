@@ -1,0 +1,8 @@
+base=sawy pipe
+{
+	"spawnoffsety": -1.25,
+	"rotation": 3.1412,
+	"animationscalex": -1,
+	"pistondisty": 1.5,
+	"customscissor": [0,0,2,2]
+}z

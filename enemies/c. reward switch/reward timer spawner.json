@@ -1,0 +1,43 @@
+{
+	"quadcount": 13,
+	"nospritesets": true,
+	"spawnonload": true,
+	"showicononeditor": true,
+
+	"width": 2,
+	"height": 2,
+
+	"offsetX": 16,
+	"offsetY": -8,
+	"quadcenterX": 20,
+	"quadcenterY": 16,
+
+	"active": false,
+
+	"spawnsenemy": "reward timer letter",
+	"spawnenemydelays": [99e99],
+	"spawnpassedparameters": ["frame"], 
+
+	"timer": 8,
+	"frame": 8,
+	"customtimer": [
+		[0,["set","timer"],["property","speedx"]],
+		[0,["set","frame"],["property","speedx"]],
+		[0,["set","speedx"],0],
+		[0,"spawnenemy"],
+		
+		[0,["set","loopline"],["property","currentcustomtimerstage"]],
+
+		[0,["set","lastframe"],["property","frame"]],
+		[0,["subtract","timer"],["property","customtimertimer"]],
+		[0,["set","frame"],["property","timer"]],
+		[0,["ceil","frame"]],
+		[0,["if","frame","==","lastframe"],["add","currentcustomtimerstage"],2],
+			[0,["if","frame","==",0],["set","instantdelete"],true],
+			[0,["if","frame","~=",0],"spawnenemy"],
+
+		[0,["set","customtimertimer"],0],
+		[0,["set","currentcustomtimerstage"],["property","loopline"]]
+	],
+	"dontloopcustomtimer": true
+}

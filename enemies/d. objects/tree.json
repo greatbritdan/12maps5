@@ -1,0 +1,64 @@
+{
+	"hitboxcolor": [255,255,255,0],
+	
+	"quadcount": 19,
+	"nospritesets": true,
+	"dontmirror": true,
+	"drawback": true,
+	"spawnonload": true,
+	
+	"width": 2,
+	"height": 3,
+	
+	"offsetX": 16,
+	"offsetY": -16,
+	"quadcenterX": 16,
+	"quadcenterY": 24,
+	
+	"active": false,
+	"autodelete": false,
+
+	"spawnsenemy": "tree part",
+	"spawnenemydelays": [99e99],
+	"spawnpassedparameters": ["quadno"],
+	"spawnpassedparametersbeforespawn": true,
+
+	"customtimer": [
+		[0,["set","quadno"],["property","tree_base"]],
+		[0,"spawnenemy"],
+
+		[0,["if","tree_decor","==",0],["add","currentcustomtimerstage"],2],
+			[0,["set","quadno"],["property","tree_decor"]],
+			[0,"spawnenemy"],
+
+		[0,["if","tree_star","==",0],["add","currentcustomtimerstage"],2],
+			[0,["set","quadno"],["property","tree_star"]],
+			[0,"spawnenemy"],
+
+		[0,["if","tree_lights","==",0],["add","currentcustomtimerstage"],4],
+			[0,["set","animationstart"],["property","tree_lights"]],
+			[0,["set","spawnsenemy"],"tree part animated"],
+			[0,["set","spawnpassedparameters"],["quadno","animationstart","animationspeed"]],
+			[0,"spawnenemy"],
+
+		[0,["set","animationstart"]],
+		[0,["set","quadno"],0],
+		[0,["set","instantdelete"],true]
+	],
+	"dontloopcustomtimer": true,
+
+	"rightclick": [
+		["text","base:"],
+		["dropdown","tree_base",7,[1,2,3],["green","teal","snow"]],
+		["text","decoration:"],
+		["dropdown","tree_decor",7,[0,4,5,6],["none","red","blue","yellow"]],
+		["text","lights:"],
+		["dropdown","tree_lights",7,[0,7,11,15],["none","red","blue","yellow"]],
+		["text","star:"],
+		["dropdown","tree_star",7,[0,19],["none","yes"]],
+		["text","speed:"],
+		["input","animationspeed",5]
+	],
+	"rightclicktypes": ["num","num","num","num","num"],
+	"rightclickdefaults": ["1","0","0","0","0.25"]
+}
