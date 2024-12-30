@@ -28,6 +28,8 @@
 
 	"makesmariogrow": true,
 	"removeonmariocontact": true,
+	"resistseverything": true,
+	
 
 	"notkilledfromblocksbelow": true,
 	"jumpsfromblocksbelow": true,

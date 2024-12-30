@@ -30,6 +30,7 @@
 	"breakshardblocks": true,
 	"nocollidestops": true,
 	"ignoreplatform": true,
+	"resistseverything": true,
 
 	"spawnsenemy": "megabill hitbox1",
 	"spawnenemydelays": [99e99],

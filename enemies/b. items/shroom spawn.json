@@ -19,5 +19,5 @@ base=shroom
 	"transforms": true,
 	"transformsinto": "shroom",
 	"transformtrigger": "lifetime",
-	"transformsetparameters": [["speedy",-2]]
+	"transformsetparameters": [["speedy",-3]]
 }

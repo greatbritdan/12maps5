@@ -4,6 +4,7 @@
 	"height":100,
 	"xrelativetocamera":0,
 	"yrelativetocamera":16.5,
+	"resistseverything":true,
 
 	"category":10,
 	"mask": [	true, 
