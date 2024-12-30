@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "transformenemy", "use" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "buttonpressed", "use", "everyone" ] ]
+}

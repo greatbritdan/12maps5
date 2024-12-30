@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "sleep", ".0001" ], [ "transformenemy", "shopdynfo3" ], [ "animationoutput", "shopdynfo1", "on" ], [ "animationoutput", "shopdynfo2", "on" ], [ "animationoutput", "shopdynfo3", "on" ] ],
+    "conditions": [ [ "ifnumber", "shopdynfo", "=", "3" ] ],
+    "triggers": [ [ "mapload" ] ]
+}

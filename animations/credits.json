@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "disablecontrols", "everyone" ], [ "playerwalk", "everyone", "right", 3 ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "credits" ] ]
+}

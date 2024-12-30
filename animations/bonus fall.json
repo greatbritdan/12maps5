@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "loadlevelinstant", "", "", "0", "2" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "bonusfall" ] ]
+}

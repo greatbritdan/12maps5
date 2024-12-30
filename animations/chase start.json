@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "screenshake", "8" ], [ "killallenemies" ], [ "launchplayer", "everyone", "0", "-15" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "chase" ] ]
+}

@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "setnumber", "shopdynfo", "=", "1" ], [ "transformenemy", "shopdynfo1" ], [ "animationoutput", "shopdynfo1", "on" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "shopdynfo1" ] ]
+}

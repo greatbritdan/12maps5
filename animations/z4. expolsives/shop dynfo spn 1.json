@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "transformenemy", "shopdynfosp1" ] ],
+    "conditions": [ [ "ifnumber", "shopdynfo", "=", "1" ] ],
+    "triggers": [ [ "animationtrigger", "shopdynfosp" ] ]
+}

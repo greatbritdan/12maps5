@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "addcoins", "1" ], [ "sleep", "0.0625" ], [ "addcoins", "1" ], [ "sleep", "0.0625" ], [ "addcoins", "1" ], [ "sleep", "0.0625" ], [ "addcoins", "1" ], [ "sleep", "0.0625" ], [ "addcoins", "1" ], [ "sleep", "0.0625" ], [ "addcoins", "1" ], [ "sleep", "0.0625" ], [ "addcoins", "1" ], [ "sleep", "0.0625" ], [ "addcoins", "1" ], [ "sleep", "0.0625" ], [ "addcoins", "1" ], [ "sleep", "0.0625" ], [ "addcoins", "1" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "10coin" ] ]
+}

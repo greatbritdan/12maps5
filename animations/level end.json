@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "killallenemies" ], [ "disablecontrols", "everyone" ], [ "playerwalk", "everyone", "right", 3 ], [ "playmusic", "none" ], [ "playsound", "levelend" ], [ "sleep", "4.9" ], [ "loadlevelinstant", "", "", "5", "1" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "levelend" ] ]
+}

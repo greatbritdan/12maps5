@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "playsound", "oneup" ], [ "changetime", "0" ], [ "removecoins", "9999" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "levelclear" ] ]
+}

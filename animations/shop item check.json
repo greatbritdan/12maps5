@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "removecollectables", "10", "1" ], [ "sleep", ".0001" ], [ "transformenemy", "buyitem" ] ],
+    "conditions": [ [ "requirecollectables", "10", "1" ] ],
+    "triggers": [ [ "animationtrigger", "buyitemcheck" ] ]
+}

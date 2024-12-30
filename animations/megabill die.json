@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "animationoutput", "megabillend", "toggle" ], [ "screenshake", "10" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "megabillend" ] ]
+}

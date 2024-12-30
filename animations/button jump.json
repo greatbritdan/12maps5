@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "transformenemy", "jump" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "buttonpressed", "jump", "everyone" ] ]
+}

@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "sety", "everyone", "17" ], [ "sleep", "3" ], [ "nextlevel" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "creditsdip" ] ]
+}

@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "transformenemy", "dialogtrig1" ], [ "animationoutput", "dialogtrig1", "on" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "dialogtrig1" ] ]
+}

@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "setnumber", "shopsnow", "=", "3" ], [ "transformenemy", "shopsnow3" ], [ "animationoutput", "shopsnow3", "on" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "shopsnow3" ] ]
+}

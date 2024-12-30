@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "setnumber", "shopice", "=", "2" ], [ "transformenemy", "shopice2" ], [ "animationoutput", "shopice2", "on" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "shopice2" ] ]
+}

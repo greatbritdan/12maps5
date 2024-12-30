@@ -1,0 +1,5 @@
+{
+    "actions": [ [ "animationoutput", "rewardswitch", "toggle" ], [ "playsound", "switch" ] ],
+    "conditions": [  ],
+    "triggers": [ [ "animationtrigger", "rewardswitch" ] ]
+}
