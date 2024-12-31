@@ -1,17 +1,17 @@
 {
-	"hidden": true,
+	"hidden": false,
 
 	"quadcount": 16,
 	"nospritesets": true,
 
-	"width": 1,
-	"height": 1,
+	"width": 2,
+	"height": 2,
 
-	"quadcenterX": 22,
-	"quadcenterY": 22,
-	"offsetX": 8,
-	"offsetY": 0,
-	"spawnoffsety": 0.25,
+	"quadcenterX": 44,
+	"quadcenterY": 44,
+	"offsetX": 16,
+	"offsetY": -8,
+	"spawnoffsety": 0.5,
 	
 	"animationtype": "frames",
 	"animationframes": 4,
@@ -25,7 +25,7 @@
 
 	"category": 4,
 	"mask": [true, 
-		false, false, false, true, true,
+		false, true, false, true, true,
 		false, true, false, true, false,
 		false, false, false, false, false,
 		true, true, false, false, false,

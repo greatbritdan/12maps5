@@ -1,10 +1,10 @@
 base=dynamite explode u0
 {
-	"width": 1.5,
-	"height": 1.5,
-	"offsetX": 12,
-	"offsetY": -4,
-	"spawnoffsety": 0.5,
+	"width": 3,
+	"height": 3,
+	"offsetX": 24,
+	"offsetY": -16,
+	"spawnoffsety": 1,
 	
 	"animationstart": 9
 }
