@@ -28,6 +28,7 @@
 		
 	"lifetime": 5,
 	"kills": true,
+	"wcdvulnerable": true,
 
 	"spawnsound": "cannonfast",
 	"dontplaysoundsoffscreen": true,
