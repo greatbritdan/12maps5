@@ -34,6 +34,7 @@ base=snowpedo
 
 	"lifetime": 5,
 	"autodelete": true,
+	"ignoreplatform": true,
 
 	"treattransformasdeath": true,
 	"transformsinto": "nil",
