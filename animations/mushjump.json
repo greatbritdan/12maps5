@@ -1,0 +1,5 @@
+{
+	 "actions": [ [ "launchplayer", "player 1", "0", "-14" ] ],
+	 "conditions": [  ],
+	 "triggers": [ [ "animationtrigger", "mushjump" ] ]
+}
