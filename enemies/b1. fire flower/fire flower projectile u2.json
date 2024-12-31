@@ -3,7 +3,7 @@ base=fire flower projectile u0
 	"animationstart": 9,
 	"transformsinto": "fire flower projectile hit u2",
 
-	"bounceforce": 14,
+	"bounceforce": 10,
 	"lifetime": 2.5,
 	
 	"width": 0.5,
