@@ -29,9 +29,6 @@
 	"lifetime": 5,
 	"kills": true,
 
-	"edible":true,
-	"copyability":"stone",
-	
 	"spawnsound": "cannonfast",
 	"dontplaysoundsoffscreen": true,
 
