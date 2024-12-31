@@ -29,7 +29,7 @@
 		true, true, true, true, true,
 		true],
 
-	"resistseverything": true,
+	"!resistseverything": true,
 	"ignoreplatform": true,
 
 	"edible":true,
