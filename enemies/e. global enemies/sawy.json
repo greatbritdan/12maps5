@@ -1,7 +1,6 @@
 {	
 	"quadcount": 4,
 	"nospritesets": true,
-	"spawnonload": true,
 
 	"offsetX": 6,
 	"offsetY": 0,
@@ -29,7 +28,6 @@
 		true, true, true, true, true,
 		true],
 
-	"!resistseverything": true,
 	"ignoreplatform": true,
 
 	"edible":true,
