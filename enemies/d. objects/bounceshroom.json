@@ -41,10 +41,10 @@
 		false, true, true, false, false,
 		true, false, true, true, true],
 
-	"stompable": true,
-	"stompbounce": true,
-	"stompbouncejump": 3,
-	"stompbouncenojump": 2,
+	"-stompable": true,
+	"-stompbounce": true,
+	"-stompbouncejump": 3,
+	"-stompbouncenojump": 2,
 
 	"resistseverything": true,
 
