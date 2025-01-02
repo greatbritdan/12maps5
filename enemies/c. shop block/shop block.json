@@ -42,7 +42,7 @@
 	"transformtriggerobjectcollide": "player",
 	"transformpassedparameters": ["startquadno","itemname","storeanimationtriggerondeath","shopupgrade1","shopupgrade2","shopupgrade3"],
 
-	"chasesensitive": true,
+	"casesensitive": true,
 	"shopupgrade": 0,
 	"rightclick": [
 		["text","contents:"],
